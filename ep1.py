@@ -61,6 +61,7 @@ def main():
 
         # Aluno A: substitua este comentário pelo código para imprimir 
         # o cenário atual.
+        print(cenario_atual)
 
         opcoes = cenario_atual['opcoes']
         if len(opcoes) == 0:
