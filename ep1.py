@@ -88,19 +88,17 @@ def carregar_cenarios():
                          "Porém custa 2 reais",
             "opcoes": {
                 "usar tobogã": "te teletransporta para o prédio antigo do Insper, mas custa 2 reais",
-                "Voltar para o terceiro andar": "retornar e matar um monstro",
-            }
+                "Voltar para o terceiro andar": "retornar e matar um monstro"
         }
-    }
+    },
     "Biblioteca": {
         "titulo":
         "descrição: 
         "opcoes": {
             "compultador": "consultar para achar livros",
             "bibliotecários": "perguntar onde os livros estão"
-            }
-        }
-    }
+        }        
+    },
      "Computador": {
             "titulo": "",
             "descricao": "",
@@ -108,34 +106,30 @@ def carregar_cenarios():
             "opcoes": {
                 "Lutar contra o programa que localiza livros": "você pode encontrar o manual de construção da máquina do tempo, mas isso irá te custar uma hora",
                 "Fugir": "sair correndo para a biblioteca",
-            }
         }
-    }
+    },
      "Pessoa": {
             "titulo": "",
             "descricao": "",
             "opcoes": {
                 "Lutar": "Você pode conquistar o manual de instruções para a máquina do tempo, mas isso irá te custar uma hora",
                 "Fugir": "Sair correndo para a biblioteca",
-            }
         }
-    }
+    },
    "Nerdbox": {
         "titulo":
         "descrição: 
         "opcoes": {
             "Abrir manual": "desvendar todos os segredos da máquina do tempo",
-            }
         }
-    }
+    },
     "Manual": {
         "titulo":
         "descrição: 
         "opcoes": {
             "Pegar os elevadores": "vamos encontrar o que é necessário para construir a máquina do tempo! yayy!",
-            }
         }
-    }
+    },
     "Elevadores": {
         "titulo":
         "descrição: 
@@ -143,9 +137,8 @@ def carregar_cenarios():
             "Ir para o quarto andar": "contém os segredos da engenharia",
             "Ir para o segundo andar": "o help desk sempre pode te ajudar!"
             "Ir para o décimo primeiro andar": "etapa final do projeto! É aconselhável você visitar os outros andares antes"
-            }
         }
-    }
+    },
     "Segundo andar": {
         "titulo":
         "descrição: 
@@ -153,9 +146,8 @@ def carregar_cenarios():
             "Luta": "podem ser fofos, mas mesmo assim são monstros! e você ganhará dois reais",
             "Amizade": "faça um novo amigo e ainda ganhe um aliado para a construção!"
             "Fuga": "corra até o elevador!"
-            }
         }
-    }
+    },
     "Quarto andar": {
         "titulo":
         "descrição: 
@@ -165,52 +157,46 @@ def carregar_cenarios():
             "Sala 401": "aula de DeSoft: você vai virar um mestre em programação, mas vai levar 2 horas" ,
             "Fuga":"pegue o elevador para outros andares",
             "Máquina de café":"um cafezinho é sempre bom para acordar"
-            }
         }
-    }
+    },
     "Materiais": {
         "titulo":
         "descrição: 
         "opcoes": {
             "Pegar materiais": "pegue o que precisa e volte para a entrada do quarto andar",
-            }
         }
-    }
+    },
     "Laboratório de InstruMed": {
         "titulo":
         "descrição: 
         "opcoes": {
             "Material": "pegar o que precisa para o circuito da máquina",
             "Voltar para a entrada": "volte para a entrada do quarto andar",
-            }
         }
-    }
+    },
     "Sala 401": {
         "titulo":
         "descrição: 
         "opcoes": 
             "Assistir aula": "Aprenda tudo que você precisa para programar a sua máquina do tempo" ,
             "Fugir":"voltar para a entrada do quarto andar"
-             }
         }
-    }
+    },
     "Aula": {
         "titulo":
         "descrição: 
         "opcoes": {
             "Sair da sala": "volte para a entrada do quarto andar",
-            }
         }
-    }
+    },
      "Décimo primeiro andar": {
         "titulo":
         "descrição: 
         "opcoes": {
             "Construir a máquina do tempo": "volte no tempo e tire A+ no EP (ou retorne a uma época em que computadores ainda não existiam)",
             "Voltar ao elevador": "encontre o material necessário para construir sua máquina" 
-            }
         }
-    }
+    },
     nome_cenario_atual = "inicio"
     return cenarios, nome_cenario_atual
 
@@ -246,7 +232,7 @@ def main():
 
             # Aluno B: substitua este comentário e a linha abaixo pelo código
             # para pedir a escolha do usuário.
-            escolha = ""
+            escolha = input("O que você quer fazer? ")
 
             if escolha in opcoes:
                 nome_cenario_atual = escolha
@@ -254,7 +240,7 @@ def main():
                 print("Sua indecisão foi sua ruína!")
                 game_over = True
 
-    print("Você morreu!")
+    print("Você morreu! Falhou na EP e está de DP!")
 
 
 # Programa principal. #qualquer coisa
