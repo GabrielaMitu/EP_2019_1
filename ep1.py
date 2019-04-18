@@ -139,6 +139,6 @@ def main():
     print("Você morreu!")
 
 
-# Programa principal.
+# Programa principal. #qualquer coisa
 if __name__ == "__main__":
     main()
