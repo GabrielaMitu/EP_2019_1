@@ -8,11 +8,7 @@ def carregar_cenarios():
     cenarios = {
         "Terraço (o início da aventura)": {
             "título": "Super Terraço do Prédio Novo",
-            "descricao": "Voce acorda no Terraço do prédio novo do Insper"
-                         "depois de beber muito no dia anterior porque"
-                         "foi muito mal nas PIs e"
-                         "tem o trabalho inteiro de DesSoft para fazer"
-                         "para o dia seguinte.",
+            "descricao": "Você está no terraço gigante do segundo prédio do Insper",
             "opcoes": {
                 "Escadas": "Descer para o quinto andar de escadas",
                 "Elevador": "usar o elevador para descer"
