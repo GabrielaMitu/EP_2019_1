@@ -4,11 +4,17 @@
 # - aluno A: Gabriela Yukari Mitu, gabrielaym@al.insper.edu.br
 # - aluno B: Gabriella Escobar Cukier, gabriellaec@al.insper.edu.br
 
+horas=10
+dinheiro=0
 def carregar_cenarios():
     cenarios = {
         "Terraço (o início da aventura)": {
             "título": "Super Terraço do Prédio Novo",
-            "descricao": "Você está no terraço gigante do segundo prédio do Insper",
+            "descricao": "Voce acorda no Terraço do prédio novo do Insper"
+                         "depois de beber muito no dia anterior porque"
+                         "foi muito mal nas PIs e"
+                         "tem o trabalho inteiro de DesSoft para fazer"
+                         "para o dia seguinte.",
             "opcoes": {
                 "Escadas": "Descer para o quinto andar de escadas",
                 "Elevador": "usar o elevador para descer"
@@ -19,7 +25,7 @@ def carregar_cenarios():
             "descricao": "o quinto andar não tem muitas coisas para fazer"
                          "então vamos refletir",
             "opcoes": {
-                "fugir": "fugir para o quarto andar" 
+                "Escadas": "fugir para o quarto andar" 
             }
         },
         "Quarto andar": {
@@ -47,7 +53,7 @@ def carregar_cenarios():
             "descricao": "muuuito café para comprar",
             "opcoes": {
                 "comprar café": "2 reais",
-                "não comprar café": "muito caro!!",
+                "não comprar café": "muito caro! Não tenho esse dinheiro",
             }
         },
         "FabLab": {
@@ -74,7 +80,8 @@ def carregar_cenarios():
             "titulo": "uma bela máquina",
             "descricao": "Essa máquina pode fazer armas!!,",
             "opcoes": {
-                "Machado 3D": "ganha +1 de poder",
+                "Martelo feito na impressora 3D: amassa o computador inimigo': 'leva 2 horas para fazer, mas é potente',
+                "Imprimir cupcakes":"presentes podem te ajudar a fazer aliados",
                 "FabLab": "voltar para a sala dos engenheiros",
             }
         },
@@ -84,9 +91,127 @@ def carregar_cenarios():
                          "para o prédio antigo do Insper!! Mágico!!"
                          "Porém custa 2 reais",
             "opcoes": {
-                "usar tobogã": "teleporte para o prédio antigo do Insper",
-                "Terceiro andar": "voltar para o terceiro andar"
-                                  "e matar um monstro",
+                "usar tobogã": "te teletransporta para o prédio antigo do Insper, mas custa 2 reais",
+                "Voltar para o terceiro andar": "retornar e matar um monstro",
+            }
+        }
+    }
+    "Biblioteca": {
+        "titulo":
+        "descrição: 
+        "opcoes": {
+            "compultador": "consultar para achar livros",
+            "bibliotecários": "perguntar onde os livros estão"
+            }
+        }
+    }
+     "Computador": {
+            "titulo": "",
+            "descricao": "",
+                         
+            "opcoes": {
+                "Lutar contra o programa que localiza livros": "você pode encontrar o manual de construção da máquina do tempo, mas isso irá te custar uma hora",
+                "Fugir": "sair correndo para a biblioteca",
+            }
+        }
+    }
+     "Pessoa": {
+            "titulo": "",
+            "descricao": "",
+            "opcoes": {
+                "Lutar": "Você pode conquistar o manual de instruções para a máquina do tempo, mas isso irá te custar uma hora",
+                "Fugir": "Sair correndo para a biblioteca",
+            }
+        }
+    }
+   "Nerdbox": {
+        "titulo":
+        "descrição: 
+        "opcoes": {
+            "Abrir manual": "desvendar todos os segredos da máquina do tempo",
+            }
+        }
+    }
+    "Manual": {
+        "titulo":
+        "descrição: 
+        "opcoes": {
+            "Pegar os elevadores": "vamos encontrar o que é necessário para construir a máquina do tempo! yayy!",
+            }
+        }
+    }
+    "Elevadores": {
+        "titulo":
+        "descrição: 
+        "opcoes": {
+            "Ir para o quarto andar": "contém os segredos da engenharia",
+            "Ir para o segundo andar": "o help desk sempre pode te ajudar!"
+            "Ir para o décimo primeiro andar": "etapa final do projeto! É aconselhável você visitar os outros andares antes"
+            }
+        }
+    }
+    "Segundo andar": {
+        "titulo":
+        "descrição: 
+        "opcoes": {
+            "Luta": "podem ser fofos, mas mesmo assim são monstros! e você ganhará dois reais",
+            "Amizade": "faça um novo amigo e ainda ganhe um aliado para a construção!"
+            "Fuga": "corra até o elevador!"
+            }
+        }
+    }
+    "Quarto andar": {
+        "titulo":
+        "descrição: 
+        "opcoes": {
+            "Laboratório de InstruMed": "ache circuitos e instrumentos para a construção",
+            "Materiais": "são importantes para a máquina!",
+            "Sala 401": "aula de DeSoft: você vai virar um mestre em programação, mas vai levar 2 horas" ,
+            "Fuga":"pegue o elevador para outros andares",
+            "Máquina de café":"um cafezinho é sempre bom para acordar"
+            }
+        }
+    }
+    "Materiais": {
+        "titulo":
+        "descrição: 
+        "opcoes": {
+            "Pegar materiais": "pegue o que precisa e volte para a entrada do quarto andar",
+            }
+        }
+    }
+    "Laboratório de InstruMed": {
+        "titulo":
+        "descrição: 
+        "opcoes": {
+            "Material": "pegar o que precisa para o circuito da máquina",
+            "Voltar para a entrada": "volte para a entrada do quarto andar",
+            }
+        }
+    }
+    "Sala 401": {
+        "titulo":
+        "descrição: 
+        "opcoes": 
+            "Assistir aula": "Aprenda tudo que você precisa para programar a sua máquina do tempo" ,
+            "Fugir":"voltar para a entrada do quarto andar"
+             }
+        }
+    }
+    "Aula": {
+        "titulo":
+        "descrição: 
+        "opcoes": {
+            "Sair da sala": "volte para a entrada do quarto andar",
+            }
+        }
+    }
+     "Décimo primeiro andar": {
+        "titulo":
+        "descrição: 
+        "opcoes": {
+            "Construir a máquina do tempo": "volte no tempo e tire A+ no EP (ou retorne a uma época em que computadores ainda não existiam)",
+            "Voltar ao elevador": "encontre o material necessário para construir sua máquina" 
             }
         }
     }
@@ -98,13 +223,14 @@ def main():
     print("Na hora do sufoco!")
     print("------------------")
     print()
-    print("Parecia uma boa idéia: vou só jogar um pouquinho/assistir Netflix/"
-        "embaçar em geral. Amanhã eu começo o EP. Mas isso não deu certo...")
+    print("Você acordou no Terraço do prédio novo do Insper depois de beber muito no dia anterior porque foi muito mal nas PIs e tem o trabalho inteiro de DesSoft para fazer para o dia seguinte.")
     print()
-    print("É o dia de entregar o EP e você está muuuuito atrasado! Você está "
-        "na entrada do Insper, e quer procurar o professor para pedir um "
-        "adiamento do EP (boa sorte...)")
+    print("Não vai dar tempo de fazer o trabalho para amanhã. Porém, há uma solução! Você deve construir uma máquina do tempo e voltar para o passado, podendo, assim, fazer o trabalho com calma")
     print()
+    print('Faltam 10 horas para a entrega do EP. \Mas cuidado! O tempo é relativo e você pode perder algumas horas com obstáculos ou derrotas em combates!')
+    print()
+    print('Além disso, você gastou todo o seu dinheiro em bebidas e agora está pobre, sem dinheiro na carteira')
+
 
     cenarios, nome_cenario_atual = carregar_cenarios()
 
