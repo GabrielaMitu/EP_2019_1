@@ -1,39 +1,96 @@
 # EP 2019-1: Escape Insper
 #
 # Alunos: 
-# - aluno A: Fulano da Silva, fulanos@insper.edu.br
-# - aluno B: Sicrano de Almeida, sicranoa1@insper.edu.br
+# - aluno A: Gabriela Yukari Mitu, gabrielaym@al.insper.edu.br
+# - aluno B: Gabriella Escobar Cukier, gabriellaec@al.insper.edu.br
 
 def carregar_cenarios():
     cenarios = {
-        "inicio": {
-            "titulo": "Saguao do perigo",
-            "descricao": "Voce esta no saguao de entrada do insper",
+        "Terraço (o início da aventura)": {
+            "título": "Super Terraço do Prédio Novo",
+            "descricao": "Voce acorda no Terraço do prédio novo do Insper"
+                         "depois de beber muito no dia anterior porque"
+                         "foi muito mal nas PIs e"
+                         "tem o trabalho inteiro de DesSoft para fazer"
+                         "para o dia seguinte.",
             "opcoes": {
-                "andar professor": "Tomar o elevador para o andar do professor",
-                "biblioteca": "Ir para a biblioteca"
+                "Escadas": "Descer para o quinto andar de escadas",
+                "Elevador": "usar o elevador para descer"
             }
         },
-        "andar professor": {
-            "titulo": "Andar do desespero",
-            "descricao": "Voce chegou ao andar da sala do seu professor",
+        "Quinto andar": {
+            "titulo": "Andar para refletir",
+            "descricao": "o quinto andar não tem muitas coisas para fazer"
+                         "então vamos refletir",
             "opcoes": {
-                "inicio": "Tomar o elevador para o saguao de entrada",
-                "professor": "Falar com o professor"
+                "fugir": "fugir para o quarto andar" 
             }
         },
-        "professor": {
-            "titulo": "O monstro do Python",
-            "descricao": "Voce foi pedir para o professor adiar o EP. "
-                         "O professor revelou que é um monstro disfarçado "
-                         "e devorou sua alma.",
-            "opcoes": {}
-        },
-        "biblioteca": {
-            "titulo": "Caverna da tranquilidade",
-            "descricao": "Voce esta na biblioteca",
+        "Quarto andar": {
+            "titulo": "Andar da fuga",
+            "descricao": "um pouco de sossego nesse andar",
             "opcoes": {
-                "inicio": "Voltar para o saguao de entrada"
+                "Terceiro andar": "Ir direto para o FabLab"
+                                  "no terceiro andar para construir armas"
+            }
+        },
+        "Terceiro andar": {
+            "titulo": "o melhor andar!!",
+            "descricao": "Aqui se encontra o famoso FabLab, lar de muitos"
+                       "engenheiros, onde tudo pode ser construído!!"
+                       "E a grandiosa máquina de café para dar"
+                       "aquela turbinada!!",
+            "opcoes": {
+                "FabLab": "vamos construir!!",
+                "Máquina de café": "comprar café",
+                "Segundo andar": "ir para o andar do tobogã"
+            }
+        },
+        "Máquina de café": {
+            "titulo": "maquininha de café gostoso",
+            "descricao": "muuuito café para comprar",
+            "opcoes": {
+                "comprar café": "2 reais",
+                "não comprar café": "muito caro!!",
+            }
+        },
+        "FabLab": {
+            "titulo": "melhor sala para futuros engenheiros!!",
+            "descricao": "Aqui se encontra a super impressora 3D avançada"
+                         "do Insper, mas prenda o cabelo para utilizá-la!!",
+            "opcoes": {
+                "Impressora 3D": "usar impressora 3D super avançada",
+                "Terceiro andar": "corredor",
+                "Ah não": "Me recuso a prender o cabelo!"
+            }
+        },            
+        "Professor do lab": {
+            "titulo": "Professor do FabLab",
+            "descricao": "O professor insiste para você prender o cabelo,"
+                         "mas você continua recusando!"
+                         "Ele se torna um monstro!!",
+            "opcoes": {
+                "lutar": "se lutar ganha 2 reais!",
+                "fugir": "prefiro prender o cabelo",
+            }
+        }, 
+        "Impressora 3D": {
+            "titulo": "uma bela máquina",
+            "descricao": "Essa máquina pode fazer armas!!,",
+            "opcoes": {
+                "Machado 3D": "ganha +1 de poder",
+                "FabLab": "voltar para a sala dos engenheiros",
+            }
+        },
+        "Segundo andar": {
+            "titulo": "o andar do tobogã",
+            "descricao": "O tobogã hoje magicamente te teletransporta"
+                         "para o prédio antigo do Insper!! Mágico!!"
+                         "Porém custa 2 reais",
+            "opcoes": {
+                "usar tobogã": "teleporte para o prédio antigo do Insper",
+                "Terceiro andar": "voltar para o terceiro andar"
+                                  "e matar um monstro",
             }
         }
     }
