@@ -6,6 +6,9 @@
 
 horas=10
 dinheiro=0
+armas=[]
+presentes=[]
+aliados=[]
 def carregar_cenarios():
     cenarios = {
         "Terraço (o início da aventura)": {
@@ -222,9 +225,10 @@ def main():
 
         # Aluno A: substitua este comentário pelo código para imprimir 
         # o cenário atual.
+        
         print(cenario_atual)
 
-        opcoes = cenario_atual['opcoes']
+        opcoes = "Suas opções são: " cenario_atual['opcoes']
         if len(opcoes) == 0:
             print("Acabaram-se suas opções! Mwo mwo mwooooo...")
             game_over = True
