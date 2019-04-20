@@ -228,6 +228,9 @@ def main():
         
         print(cenario_atual)
 
+        
+        
+        
         opcoes = "Suas opções são: " cenario_atual['opcoes']
         if len(opcoes) == 0:
             print("Acabaram-se suas opções! Mwo mwo mwooooo...")
@@ -236,17 +239,245 @@ def main():
 
             # Aluno B: substitua este comentário e a linha abaixo pelo código
             # para pedir a escolha do usuário.
-            escolha = input("O que você quer fazer? ")
+             opcoes = cenario_atual['opcoes']
+        if len(opcoes) == 0:
+            print("Acabaram-se suas opções! Mwo mwo mwooooo...")
+            game_over = True
 
+        else:
+            for lugar, resumo in opcoes.items():
+                print('-' + lugar + ": " + resumo)
+            
+            escolha = input("O que vai fazer? ")
             if escolha in opcoes:
-                nome_cenario_atual = escolha
+                nome_cenario_atual=escolha
+                
+        #no terraco
+                if escolha == 'Escadas':
+                    nome_cenario_atual = "Quarto andar"
+                    
+        #na maquina de cafe    
+                elif escolha == 'Comprar café':
+                    if dinheiro >= 2:
+                        dinheiro-=2
+                        horas+=2
+                        print('Você gastou 2 reais')
+                        print('Mas está mais acordado e ganhou tempo!')
+                        print('Você tem mais duas horas!')
+                        print('Restam {0} horas'.format(horas))
+                        print('Você agora tem {0} reais'.format(dinheiro))
+                        nome_cenario_atual = "Terceiro andar"
+                    else:
+                        print('Você não pode pagar isso!')
+                        print('Que pena! Você morreu!')
+                        print('Zerou o EP e está de DP')
+                        game_over = True
+                elif escolha == "Não comprar café":
+                    nome_cenario_atual = "Terceiro andar"
+                
+     #impressora 3d
+                elif escolha == "Martelo" or escolha == "Carrinho":
+                    armas.append(escolha)
+                    for a in armas:
+                        print('Você possui agora: ' + a)
+                    print('Você está retornando ao FabLab')
+                    nome_cenario_atual = "FabLab"
+                elif escolha == 'Cupcakes':
+                    presentes.append(escolha)
+                    for p in presentes:
+                        print('Você possui agora: ' + p)
+                    print('Você está retornando ao FabLab')
+                    nome_cenario_atual = "FabLab"
+                elif escolha == 'Fugir pro Lab':
+                    nome_cenario_atual = "FabLab"
+
+                        
+###########                
+            # ah nao:
+                elif escolha == "Lutar contra monstro do Lab":
+                        if len(armas) == 0:
+                            print('Você não tem nenhuma arma para lutar!')
+                            print('O monstro te devorou!')
+                            game_over = True
+                            
+                        else:
+                            arma_escolhida=input('Qual arma você quer usar?  ')
+                            if arma_escolhida in armas:
+                                if arma_escolhida == 'Martelo':
+                                    dinheiro+=4
+                                    print('Parabéns! Você venceu!')
+                                    print('A insper está grata')
+                                    print('Por isso você ganhou 4 reais!')
+                                    print('Você agora tem {0} reais'.format(dinheiro))
+                                    nome_cenario_atual = "FabLab"
+
+                                    
+                                elif arma_escolhida == 'Carrinho':
+                                    dinheiro+=3
+                                    print('Parabéns! Você venceu!')
+                                    print('A insper está grata')
+                                    print('Por isso você ganhou 3 reais!')
+                                    print('Você agora tem {0} reais'.format(dinheiro))
+                                    nome_cenario_atual = "FabLab"
+                                
+                            else:
+                                    print('Você não tem essa arma')
+                                    print('Está perdido demais, nem sabe o que tem')
+                                    print('Não vai entregar o EP e está de DP!')
+                                    game_over = True
+                elif escolha == 'Fugir pro Lab':
+                        nome_cenario_atual == "FabLab"
+                        
+            # segundo andar
+                elif escolha == 'Teletransporte':
+                    if dinheiro >= 2:
+                        dinheiro-=2
+                        horas+=4
+                        print('Você gastou 2 reais')
+                        print('Mas conseguiu trocar de prédio')
+                        print('Parabéns, está mais perto de construir a máquina do tempo!')
+                        print('Ganhou quatro horas')
+                        print('Restam {0} horas'.format(horas))
+                        print('Você agora tem {0} reais'.format(dinheiro))
+                        nome_cenario_atual = 'Biblioteca'
+                    else:
+                        print('Você não pode pagar isso!')
+                        print('Que pena! Você morreu!')
+                        print('Zerou o EP e está de DP')
+                        game_over = True
+            
+        # biblioteca
+                elif escolha == "Lutar contra pessoa" or escolha == "Lutar contra o computador":
+                        if len(armas) == 0:
+                            print('Você não tem nenhuma arma para lutar!')
+                            print('O monstro ganhou!')
+                            print('Game Over para você...')
+                            game_over = True
+                        else:
+                            arma_escolhida=input('Qual arma você quer usar? ')
+                            if arma_escolhida in armas:
+                                if arma_escolhida == 'Martelo':
+                                    horas-=2
+                                    print('Parabéns! Você venceu!')
+                                    print('Ganhou o manual')
+                                    print('Mas demora para achar os livros...')
+                                    print('Você perdeu duas horas')
+                                    print('Restam {0} horas'.format(horas))
+                                    nome_cenario_atual = 'Nerdbox'
+
+                                elif arma_escolhida == 'Carrinho':
+                                    horas-=3
+                                    print('Parabéns! Você venceu!')
+                                    print('Ganhou o manual')
+                                    print('Mas demora para achar os livros...')
+                                    print('Você perdeu três horas')
+                                    print('Restam {0} horas'.format(horas))
+                                    nome_cenario_atual = 'Nerdbox'
+                            else:
+                                print('Você não tem essa arma')
+                                print('Está perdido demais, nem sabe o que tem')
+                                print('Não vai entregar o EP e está de DP!')
+                                game_over = True
+                                
+                elif escolha == 'Fugir para a biblioteca':
+                        nome_cenario_atual = 'Biblioteca'
+                        
+                        
+                                
+    # andar 2
+                elif escolha == 'Lutar':
+                        if len(armas) == 0:
+                            print('Você não tem nenhuma arma para lutar!')
+                            print('O monstro ganhou!')
+                            print('Game Over para você...')
+                            game_over = True
+                        else:
+                            arma_escolhida=input('Qual arma você quer usar? ')
+                            if arma_escolhida in armas:
+                                if arma_escolhida == 'Martelo':
+                                    dinheiro+=3
+                                    horas-=1
+                                    print('Parabéns! Você venceu!')
+                                    print('Ganhou três reais!')
+                                    print('Mas perdeu uma hora no combate')
+                                    print('Restam {0} horas'.format(horas))
+                                    print('Você agora tem {0} reais'.format(dinheiro))
+                                    nome_cenario_atual = 'Elevadores'
+  
+                                elif arma_escolhida == 'Carrinho':
+                                    horas-=1
+                                    dinheiro+=2
+                                    print('Parabéns! Você venceu!')
+                                    print('Ganhou dois reais!')
+                                    print('Mas perdeu uma hora no combate')
+                                    print('Restam {0} horas'.format(horas))
+                                    print('Você agora tem {0} reais'.format(dinheiro))
+                                    nome_cenario_atual = 'Elevadores'
+                            else:
+                                print('Você não tem essa arma')
+                                print('Está perdido demais, nem sabe o que tem')
+                                print('Não vai entregar o EP e está de DP!')
+                                game_over = True
+                elif escolha == 'Amigos':
+                        if len(presentes) == 0:
+                            print('Você não tem nenhum presente para dar!')
+                            print('O monstro não gostou de você!')
+                            print('Por isso, te devorou...')
+                            game_over = True
+                        else:
+                            
+                            requisitos.append('Aliado')
+                            print('O monstro adorou seu presente!')
+                            print('Você ganhou um aliado!')
+                            nome_cenario_atual = 'Elevadores'
+                elif escolha == 'Fugir':
+                        nome_cenario_atual = 'Elevadores'
+            # desoft
+                elif escolha == "Aula":
+                    requisitos.append('Programação')
+                    horas-=2
+                    print('Eba! Agora você já sabe programar')
+                    print('Pode usar isso na sua máquina do tempo')
+                    print('Mas a aula levou duas horas')
+                    print('Restam {0} horas'.format(horas))
+                    nome_cenario_atual = "Aula"
+              
+                
+            #materiais
+                elif nome_cenario_atual == "Materiais":
+                    requisitos.append('Materiais')
+                    nome_cenario_atual = "Materiais"
+                    
+                
+            # ultima fase
+                elif escolha == "Construir a máquina do tempo":
+                    if 'Materiais' and 'Programação'and 'Aliado' in requisitos:
+                        print('Parabéns!')
+                        print('Você construiu sua máquina do tempo!')
+                        print('Agora volte para o passado e termine seu EP!')
+                    else:
+                        print('Você não tem os requisitos necessários...')
+                        print('O que você tem agora é: ')
+                        for r in requisitos:
+                            print(r)
+                        final=['voltar para os elevadores', 'desistir']
+                        print('Você pode: {0} ou {1}'.format(final[0],final[1]))
+                        escolha=input('O que quer fazer? ')
+                        if escolha in final:
+                            if escolha == 'voltar para os elevadores':
+                                nome_cenario_atual = 'Elevadores'
+                            else:
+                                print('Foi por pouco...')
+                                print('Você perdeu...')
+                                game_over= True
+                        else:
+                            print('Você está indeciso demais!')
+                            print('Foi por pouco...')
+                            print('Você perdeu...')
+                            game_over= True
             else:
-                print("Sua indecisão foi sua ruína!")
-                game_over = True
+                print('Sua indecisão foi sua ruína!')
+                print('Zerou o EP e está de DP')
+                game_over= True
 
-    print("Você morreu! Falhou na EP e está de DP!")
-
-
-# Programa principal. #qualquer coisa
-if __name__ == "__main__":
-    main()
+main()
