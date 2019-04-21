@@ -201,7 +201,7 @@ def carregar_cenarios():
 
 
 def main():
-     horas=10
+    horas=10
 
     dinheiro=2
 
@@ -244,6 +244,8 @@ def main():
               "Ano do início da Revolução Francesa":"1789",
               "Ano do fim da Segunda Guerra Mundial":"1945",
               }
+    
+    
     print("Na hora do sufoco!")
     print("------------------")
     print()
@@ -483,40 +485,61 @@ def main():
                         
                                 
     # andar 2
-        #Se o jogador quiser lutar contra o monstro
+        #Se o jogador quiser lutar contra o monstro, precisa jogar o Jogo do Chute
                 elif escolha == 'Lutar':
-                        if len(armas) == 0:
-                            print('Você não tem nenhuma arma para lutar!')
-                            print('O monstro ganhou!')
-                            print('Game Over para você...')
-                            game_over = True
-                        else:
-                            arma_escolhida=input('Qual arma você quer usar? ')
-                            if arma_escolhida in armas:
-                                if arma_escolhida == 'Martelo':
-                                    dinheiro+=3
-                                    horas-=1
-                                    print('Parabéns! Você venceu!')
-                                    print('Ganhou três reais!')
-                                    print('Mas perdeu uma hora no combate')
-                                    print('Restam {0} horas'.format(horas))
-                                    print('Você agora tem {0} reais'.format(dinheiro))
-                                    nome_cenario_atual = 'Elevadores'
-  
-                                elif arma_escolhida == 'Carrinho':
-                                    horas-=1
-                                    dinheiro+=2
-                                    print('Parabéns! Você venceu!')
-                                    print('Ganhou dois reais!')
-                                    print('Mas perdeu uma hora no combate')
-                                    print('Restam {0} horas'.format(horas))
-                                    print('Você agora tem {0} reais'.format(dinheiro))
-                                    nome_cenario_atual = 'Elevadores'
+                        print('-'*len('monstro do chute'))
+                        print('MONSTRO DO CHUTE')
+                        print('-'*len('monstro do chute'))
+                        print('Você enfrentará o Monstro do Chute')
+                        print('Ele pensará em um número de 1 a 20 e você tem 5 tentativas para adivinhar qual é')
+                        print('Boa sorte!')
+                        VALOR_MAXIMO = 20
+                        MAX_TENTATIVAS = 5
+                        
+                        num_secreto = random.randint(1, VALOR_MAXIMO)
+                        
+                        num_chute = int(input("Digite inteiro entre 1 e {0}: ".format(VALOR_MAXIMO))) 
+                        while num_chute < 1 or num_chute > VALOR_MAXIMO: 
+                            print("Valor invalido. Tente novamente") 
+                            num_chute = int(input("Digite inteiro entre 1 e {0}: ".format(VALOR_MAXIMO)))
+                            
+              #tem 5 tentativas para acertar o valor
+                        contador = 1
+                        while num_chute != num_secreto and contador < MAX_TENTATIVAS:
+                            contador += 1
+                            if num_chute < num_secreto: 
+                                print("Muito baixo") 
+                            elif num_chute > num_secreto: 
+                                print("Muito alto")
+                            num_chute = int(input("Digite inteiro entre 1 e {0}: ".format(VALOR_MAXIMO))) 
+                        while num_chute < 1 or num_chute > VALOR_MAXIMO: 
+                            print("Valor invalido") 
+                            num_chute = int(input("Digite inteiro entre 1 e {0}: ".format(VALOR_MAXIMO)))
+                            
+                       #se não conseguir, perde o jogo
+                        if num_chute != num_secreto: 
+                            print("Que pena, você perdeu!") 
+                            print('O jogo acabou...')
+                            game_over=True
+                       #se conseguir, ganha prêmios, que são melhores no caso de o número de tentativas ser inferior ou igual a 3
+                        else: 
+                            print("Acertou em {0} tentativas".format(contador))
+                            if contador <=3:
+                                premio_dinheiro+=5
+                                premio_horas+=3
                             else:
-                                print('Você não tem essa arma')
-                                print('Está perdido demais, nem sabe o que tem')
-                                print('Não vai entregar o EP e está de DP!')
-                                game_over = True
+                                premio_dinheiro+=3
+                                premio_horas+=1
+                            dinheiro+=premio_dinheiro
+                            horas+=premio_horas
+                            print('Você ganhou {0} e agora tem {1} vidas'.format(premio_vida,vidas_jogador))
+                            print('Você ganhou {0} e agora tem {1} reais'.format(premio_dinheiro,dinheiro))
+                            print('Você ganhou {0} e agora tem {1} horas'.format(premio_horas,horas))
+                            
+                            #terminada a luta, volta para os elevadores
+                            print('Você está retornando aos elevadores'
+                            nome_cenario_atual = 'Elevadores'
+
                                 
            #Se o jogador quiser fazer um amigo/aliado              
                 elif escolha == 'Amigos':
@@ -566,11 +589,13 @@ def main():
                 
             # ultima fase
                 elif escolha == "Construir a máquina do tempo":
+                  #o jogador deve ter todos os requisitos necessários para a construção
                     if 'Materiais' and 'Programação'and 'Aliado' in requisitos:
                         print('Parabéns!')
                         print('Você construiu sua máquina do tempo!')
                         print('Agora volte para o passado e termine seu EP!')
                         vitoria = True
+                 #caso contrário, pode sair do jogo ou retornar ao mesmo para tentar obter os itens que faltam
                     else:
                         print('Você não tem os requisitos necessários...')
                         print('O que você tem agora é: ')
@@ -590,6 +615,7 @@ def main():
                             print('Você está indeciso demais!')
                             print('Foi por pouco...')
                             print('Você perdeu...')
+                            game_over = True
             else:
                 print('Essa não é uma opção!')
                 print('Você tem mais uma chance apenas de acertar!')
