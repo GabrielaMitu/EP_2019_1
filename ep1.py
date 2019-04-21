@@ -241,8 +241,8 @@ def main():
               "Capital da Islândia":"Reykjavik",
               "Capital do Acre":"Rio Branco",
               "Capital dos EUA":"Washington",
-              "Ano do início da Revolução Francesa":"1784",
-              "Ano do fim da Primeira Guerra Mundial":"1945",
+              "Ano do início da Revolução Francesa":"1789",
+              "Ano do fim da Segunda Guerra Mundial":"1945",
               }
     print("Na hora do sufoco!")
     print("------------------")
@@ -483,6 +483,7 @@ def main():
                         
                                 
     # andar 2
+        #Se o jogador quiser lutar contra o monstro
                 elif escolha == 'Lutar':
                         if len(armas) == 0:
                             print('Você não tem nenhuma arma para lutar!')
@@ -516,20 +517,27 @@ def main():
                                 print('Está perdido demais, nem sabe o que tem')
                                 print('Não vai entregar o EP e está de DP!')
                                 game_over = True
+                                
+           #Se o jogador quiser fazer um amigo/aliado              
                 elif escolha == 'Amigos':
                         if len(presentes) == 0:
                             print('Você não tem nenhum presente para dar!')
                             print('O monstro não gostou de você!')
                             print('Por isso, te devorou...')
                             game_over = True
-                        else:
                             
-                            requisitos.append('Aliado')
+                        else:
+                             requisitos.append('Aliado')
+                            print('Voce deu um: ')
+                            for p, d in presentes.items():
+                                print(p + ': ' + d)
                             print('O monstro adorou seu presente!')
                             print('Você ganhou um aliado!')
                             nome_cenario_atual = 'Elevadores'
+                            
                 elif escolha == 'Fugir':
                         nome_cenario_atual = 'Elevadores'
+                
             # desoft
                 elif escolha == "Aula":
                     requisitos.append('Programação')
@@ -541,6 +549,15 @@ def main():
                     nome_cenario_atual = "Aula"
               
                 
+                
+            #laboratório de instrumed
+                elif escolha == 'Laboratório de InstruMed':
+                     print('Relatório surpresa!!!')
+                     horas-=5
+                     print('Você perdeu 5 horas e agora tem {0}'.format(horas))
+                     nome_cenario_atual = 'Laboratório de InstruMed'
+                    
+                    
             #materiais
                 elif nome_cenario_atual == "Materiais":
                     requisitos.append('Materiais')
@@ -553,16 +570,17 @@ def main():
                         print('Parabéns!')
                         print('Você construiu sua máquina do tempo!')
                         print('Agora volte para o passado e termine seu EP!')
+                        vitoria = True
                     else:
                         print('Você não tem os requisitos necessários...')
                         print('O que você tem agora é: ')
                         for r in requisitos:
                             print(r)
                         final=['voltar para os elevadores', 'desistir']
-                        print('Você pode: {0} ou {1}'.format(final[0],final[1]))
-                        escolha=input('O que quer fazer? ')
+                        print('Você pode: {0} (1) ou {1} (2)'.format(final[0],final[1]))
+                        escolha=int(input('O que quer fazer? (responda com 1 ou 2)'))
                         if escolha in final:
-                            if escolha == 'voltar para os elevadores':
+                            if escolha == 1:
                                 nome_cenario_atual = 'Elevadores'
                             else:
                                 print('Foi por pouco...')
@@ -572,10 +590,24 @@ def main():
                             print('Você está indeciso demais!')
                             print('Foi por pouco...')
                             print('Você perdeu...')
-                            game_over= True
             else:
-                print('Sua indecisão foi sua ruína!')
-                print('Zerou o EP e está de DP')
-                game_over= True
+                print('Essa não é uma opção!')
+                print('Você tem mais uma chance apenas de acertar!')
+                escolha = input("O que vai fazer? ")
+                if escolha in opcoes:
+                    nome_cenario_atual=escolha
+                else:
+                    print('Sua indecisão foi sua ruína!')
+                    print('Zerou o EP e está de DP')
+                    game_over= True
+                    
+                    
+ # fim do jogo
+#se o jogador ganhar
+if vitoria:
+        print('Parabéns!')
+        print('Você construiu sua máquina do tempo!')
+        print('Agora volte para o passado e termine seu EP!')
+
 
 main()
