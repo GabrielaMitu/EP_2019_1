@@ -3,12 +3,8 @@
 # Alunos: 
 # - aluno A: Gabriela Yukari Mitu, gabrielaym@al.insper.edu.br
 # - aluno B: Gabriella Escobar Cukier, gabriellaec@al.insper.edu.br
+import random
 
-horas=10
-dinheiro=0
-armas=[]
-presentes=[]
-aliados=[]
 def carregar_cenarios():
     cenarios = {
         "Terraço (o início da aventura)": {
@@ -205,6 +201,49 @@ def carregar_cenarios():
 
 
 def main():
+     horas=10
+
+    dinheiro=2
+
+    armas={}
+
+    presentes={}
+
+    requisitos=[]
+
+    cenarios, nome_cenario_atual = carregar_cenarios()
+
+    game_over = False
+    
+    vitoria=False
+    
+    vidas_jogador = 16
+
+
+#### add mais monstros
+    monstros = {
+            "Golem":{
+                    "descricao": "",
+                    "vida":10, 
+                    "dano":5
+                            },
+            "Jupyter notebook":{
+                    "descricao": "",
+                    "vida":8, 
+                    "dano":8
+                    }
+            }
+            
+            
+############# add mais perguntas
+    conhecimento={"5 primeiros dígitos de pi, sem vírgula":"31415",
+              "Capital da Austrália":"Canberra",
+              "Capital da Islândia":"Reykjavik",
+              "Capital do Acre":"Rio Branco",
+              "Capital dos EUA":"Washington",
+              "Ano do início da Revolução Francesa":"1784",
+              "Ano do fim da Primeira Guerra Mundial":"1945",
+              }
     print("Na hora do sufoco!")
     print("------------------")
     print()
@@ -291,40 +330,99 @@ def main():
                 elif escolha == 'Fugir pro Lab':
                     nome_cenario_atual = "FabLab"
 
+                    
+    # ah nao:
                         
-###########                
-            # ah nao:
+##COMBATE!##           
                 elif escolha == "Lutar contra monstro do Lab":
-                        if len(armas) == 0:
-                            print('Você não tem nenhuma arma para lutar!')
-                            print('O monstro te devorou!')
-                            game_over = True
-                            
-                        else:
-                            arma_escolhida=input('Qual arma você quer usar?  ')
-                            if arma_escolhida in armas:
-                                if arma_escolhida == 'Martelo':
-                                    dinheiro+=4
-                                    print('Parabéns! Você venceu!')
-                                    print('A insper está grata')
-                                    print('Por isso você ganhou 4 reais!')
-                                    print('Você agora tem {0} reais'.format(dinheiro))
-                                    nome_cenario_atual = "FabLab"
+                         print('-'*len('combate'))
+                    print('COMBATE')
+                    print('-'*len('combate'))
 
-                                    
-                                elif arma_escolhida == 'Carrinho':
-                                    dinheiro+=3
-                                    print('Parabéns! Você venceu!')
-                                    print('A insper está grata')
-                                    print('Por isso você ganhou 3 reais!')
-                                    print('Você agora tem {0} reais'.format(dinheiro))
-                                    nome_cenario_atual = "FabLab"
-                                
-                            else:
-                                    print('Você não tem essa arma')
-                                    print('Está perdido demais, nem sabe o que tem')
-                                    print('Não vai entregar o EP e está de DP!')
-                                    game_over = True
+            #definindo monstro
+                    monstro = random.choice(list(monstros.keys()))
+                    vidas_monstro = monstros[monstro]["vida"]
+                    dano_monstro = monstros[monstro]["dano"]
+                    descricao_monstro = monstros[monstro]["descricao"]
+                    
+                    print (len('GAME ON')*"-")
+                    print ("GAME ON")
+                    print (len('GAME ON')*"-")                    
+                    print()
+                    print('Seu adversário é: {0}'.format(monstro))
+                    print(descricao_monstro)
+                    print('Ele causa {0} de dano e tem {1} vidas'.format(dano_monstro,vidas_monstro))
+                    print()
+                    
+                    print('Responda com 1 ou 2:')
+                    resposta = int(input('Quer entrar no combate (1) ou fugir (2)? '))
+                    
+                    if resposta == 2:
+                        print('Para fugir, você deve passar no desafio')
+                        num_a=random.randint(1,20)
+                        num_b=random.randint(1,3)
+                        resultado = int(input('Quanto é {0} elevado a {1}? '.format(num_a,num_b)))
+                        if resultado != num_a**num_b:
+                            print('Sua fuga deu errado')
+                            print('Agora terá que lutar')
+                            resposta=1
+                        else:
+                            nome_cenario_atual = 'FabLab'
+                    if resposta == 1:
+                        print('É hora do combate!!!')
+                        print()
+                       
+            #armas e vidas
+                    if len(armas) != 0:
+                        print('Você possui: ')
+                        for a in armas.keys():
+                            print(a)
+                        arma_escolhida=input('Escolha uma arma: ')
+                        while arma_escolhida not in armas:
+                            print('Você não tem essa arma')
+                            arma_escolhida=input('Escolha outra arma: ')
+                        print('Sua arma de combate é: {0}'.format(arma_escolhida))  
+                        dano_arma=armas[arma_escolhida]
+                        print('Ela causa {0} de dano'.format(dano_arma))
+                        print()
+                    else:
+                        game_over=True
+                        
+            #início do combate
+                    print('O combate começa agora')
+                    print('Acerte a pergunta para atacar. Se errar, o monstro te ataca')
+                    while vidas_jogador > 0 and vidas_monstro > 0:
+                        teste= random.choice(list(conhecimento.keys()))
+                        respondido = input(teste + ': ')
+                        if respondido == conhecimento[teste]:
+                            print('Correto!')
+                            print('É sua vez de atacar')
+                            vidas_monstro -= dano_arma
+                            print('Seu adversário perdeu {0} e agora tem {1} vidas'.format(dano_arma,vidas_monstro))
+                            print('você tem agora {0} vidas'.format(vidas_jogador))
+                        else:
+                            print('Resposta incorreta')
+                            print('Ahhh! O monstro vai te atacar')
+                            vidas_jogador-=dano_monstro
+                            print('Você perdeu {0} e agora tem {1} vidas'.format(dano_monstro,vidas_jogador))
+                            print('O montro tem agora {0} vidas'.format(vidas_monstro))
+                            
+            #resultados da luta
+                    if vidas_jogador <= 0:
+                        print('Meus pêsames, você morreu...')
+                        game_over = True
+                    elif vidas_monstro <= 0:
+                        print('Parabéns, você venceu o monstro!')
+                        premio_vida=random.randint(1,8)
+                        premio_dinheiro=random.randint(1,15)
+                        premio_horas=random.randint(1,5)
+                        vidas_jogador+=premio_vida
+                        dinheiro+=premio_dinheiro
+                        horas+=premio_horas
+                        print('Você ganhou {0} e agora tem {1} vidas'.format(premio_vida,vidas_jogador))
+                        print('Você ganhou {0} e agora tem {1} reais'.format(premio_dinheiro,dinheiro))
+                        print('Você ganhou {0} e agora tem {1} horas'.format(premio_horas,horas))
+                        nome_cenario_atual = "FabLab"
                 elif escolha == 'Fugir pro Lab':
                         nome_cenario_atual == "FabLab"
                         
