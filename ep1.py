@@ -8,22 +8,32 @@ import random
 def carregar_cenarios():
     cenarios = {
         "Terraço (o início da aventura)": {
-            "título": "Super Terraço do Prédio Novo",
-            "descricao": "Você está no terraço gigante do segundo prédio do Insper",
+            "titulo": "Super Terraço do Prédio Novo",
+            "descricao": "Você está no terraço gigante do prédio "
+                         "novo do Insper",
             "opcoes": {
                 "Escadas": "Descer para o quinto andar de escadas",
                 "Elevador": "usar o elevador para descer"
             }
         },
-        "Quinto andar": {
+        "Quinto andar do prédio novo": {
+            "Quinto andar do prédio novo": {
             "titulo": "Andar para refletir",
-            "descricao": "o quinto andar não tem muitas coisas para fazer"
+            "descricao": "o quinto andar não tem muitas coisas para fazer "
                          "então vamos refletir",
             "opcoes": {
                 "Escadas": "fugir para o quarto andar" 
             }
         },
-        "Quarto andar": {
+        "Elevador": {
+                "titulo": "Elevador do prédio novo",
+                "descricao": "Que pena, o elevador está quebrado!!",
+                "opcoes":{
+                    "Escadas": "Descer para o quinto andar de escadas",
+                    "Desistir da vida": "zerar o EP"
+            }
+        },
+        "Quarto andar do prédio novo": {
             "titulo": "Andar da fuga",
             "descricao": "um pouco de sossego nesse andar",
             "opcoes": {
@@ -31,11 +41,11 @@ def carregar_cenarios():
                                   "no terceiro andar para construir armas"
             }
         },
-        "Terceiro andar": {
+        "Terceiro andar do prédio novo": {
             "titulo": "o melhor andar!!",
-            "descricao": "Aqui se encontra o famoso FabLab, lar de muitos"
-                       "engenheiros, onde tudo pode ser construído!!"
-                       "E a grandiosa máquina de café para dar"
+            "descricao": "Aqui se encontra o famoso FabLab, lar de muitos "
+                       "engenheiros, onde tudo pode ser construído!! "
+                       "E a grandiosa máquina de café para dar "
                        "aquela turbinada!!",
             "opcoes": {
                 "FabLab": "vamos construir!!",
@@ -51,9 +61,16 @@ def carregar_cenarios():
                 "não comprar café": "muito caro! Não tenho esse dinheiro",
             }
         },
+        "Máquina de pipoca":{
+            "titulo": "maquininha com a melhor pipoca",
+            "descricao": "é realmente muito boa",
+            "opcoes": {
+                ""
+            }
+        },
         "FabLab": {
             "titulo": "melhor sala para futuros engenheiros!!",
-            "descricao": "Aqui se encontra a super impressora 3D avançada"
+            "descricao": "Aqui se encontra a super impressora 3D avançada "
                          "do Insper, mas prenda o cabelo para utilizá-la!!",
             "opcoes": {
                 "Impressora 3D": "usar impressora 3D super avançada",
@@ -61,10 +78,10 @@ def carregar_cenarios():
                 "Ah não": "Me recuso a prender o cabelo!"
             }
         },            
-        "Professor do lab": {
+       "Ah não": {
             "titulo": "Professor do FabLab",
-            "descricao": "O professor insiste para você prender o cabelo,"
-                         "mas você continua recusando!"
+            "descricao": "O professor insiste para você prender o cabelo, "
+                         "mas você continua recusando! "
                          "Ele se torna um monstro!!",
             "opcoes": {
                 "lutar": "se lutar ganha 2 reais!",
@@ -72,18 +89,18 @@ def carregar_cenarios():
             }
         }, 
         "Impressora 3D": {
-            "titulo": "uma bela máquina",
-            "descricao": "Essa máquina pode fazer armas!!,",
+            "titulo": "Uma bela máquina",
+            "descricao": "Essa máquina pode fazer armas!!",
             "opcoes": {
                 "Martelo feito na impressora 3D: amassa o computador inimigo': 'leva 2 horas para fazer, mas é potente',
                 "Imprimir cupcakes":"presentes podem te ajudar a fazer aliados",
                 "FabLab": "voltar para a sala dos engenheiros",
             }
         },
-        "Segundo andar": {
-            "titulo": "o andar do tobogã",
-            "descricao": "O tobogã hoje magicamente te teletransporta"
-                         "para o prédio antigo do Insper!! Mágico!!"
+        "Segundo andar do prédio novo": {
+            "titulo": "O andar do tobogã",
+            "descricao": "O tobogã hoje magicamente te teletransporta "
+                         "para o prédio antigo do Insper!! Mágico!! "
                          "Porém custa 2 reais",
             "opcoes": {
                 "usar tobogã": "te teletransporta para o prédio antigo do Insper, mas custa 2 reais",
@@ -91,65 +108,74 @@ def carregar_cenarios():
         }
     },
     "Biblioteca": {
-        "titulo":
-        "descrição: 
+            "titulo": "Há todos os tipos de livros aqui!!",
+            "descricao": "Procure o manual!!",
         "opcoes": {
             "compultador": "consultar para achar livros",
             "bibliotecários": "perguntar onde os livros estão"
         }        
     },
-     "Computador": {
-            "titulo": "",
-            "descricao": "",
-                         
+    "Computador": {
+            "titulo": "O computador misterioso da biblioteca",
+            "descricao": "você tenta procurar o manual pelo pc, "
+                         "mas ele não mostra a localização do manual. "
+                         "Você fica com raiva e chuta o computador. "
+                         "Ele revela ser um monstro disfarçado "
+                         "e tenta te matar",                        
             "opcoes": {
                 "Lutar contra o programa que localiza livros": "você pode encontrar o manual de construção da máquina do tempo, mas isso irá te custar uma hora",
                 "Fugir": "sair correndo para a biblioteca",
         }
     },
-     "Pessoa": {
-            "titulo": "",
-            "descricao": "",
+      "Pessoa": {
+            "titulo": "A pessoa do fablab",
+            "descricao": "Você pergunta sobre a localização do manual, "
+                         "mas ela nega dar a informação para você. "
+                         "Você insiste. "
+                         "Ela revela ser um monstro disfarçado "
+                         "e tenta te matar",
             "opcoes": {
                 "Lutar": "Você pode conquistar o manual de instruções para a máquina do tempo, mas isso irá te custar uma hora",
                 "Fugir": "Sair correndo para a biblioteca",
         }
     },
-   "Nerdbox": {
-        "titulo":
-        "descrição: 
+    "Nerdbox": {
+        "titulo": "Paraíso dos engenheiros",
+        "descricao": "Aqui você encontra sossego!!"
+                     "O melhor lugar de estudos do Insper!!",
         "opcoes": {
             "Abrir manual": "desvendar todos os segredos da máquina do tempo",
         }
     },
-    "Manual": {
-        "titulo":
-        "descrição: 
+     "Manual": {
+        "titulo": "Manual da salvação",
+        "descricao": "Tudo para se construir a máquina do tempo",
         "opcoes": {
             "Pegar os elevadores": "vamos encontrar o que é necessário para construir a máquina do tempo! yayy!",
         }
     },
-    "Elevadores": {
-        "titulo":
-        "descrição: 
+     "Elevador do prédio velho": {
+        "titulo": "Elevador da felicidade",
+        "descricao": "Os elevadores desse prédio estão funcionando!! Yaayy!", 
         "opcoes": {
             "Ir para o quarto andar": "contém os segredos da engenharia",
             "Ir para o segundo andar": "o help desk sempre pode te ajudar!"
             "Ir para o décimo primeiro andar": "etapa final do projeto! É aconselhável você visitar os outros andares antes"
         }
     },
-    "Segundo andar": {
-        "titulo":
-        "descrição: 
+    "Segundo andar do prédio velho": {
+        "titulo": "O andar peculiar",
+        "descricao": "Meu deus!! Tem muitos monstros no HelpDesk!! "
+                     "Mas por algum motivo, eles são fofos...",
         "opcoes": {
             "Luta": "podem ser fofos, mas mesmo assim são monstros! e você ganhará dois reais",
             "Amizade": "faça um novo amigo e ainda ganhe um aliado para a construção!"
             "Fuga": "corra até o elevador!"
         }
     },
-    "Quarto andar": {
-        "titulo":
-        "descrição: 
+    "Quarto andar do prédio velho": {
+        "titulo": "O famoso andar dos engenheiros do prédio velho",
+        "descricao": "Mãos a obra!!",
         "opcoes": {
             "Laboratório de InstruMed": "ache circuitos e instrumentos para a construção",
             "Materiais": "são importantes para a máquina!",
@@ -159,38 +185,44 @@ def carregar_cenarios():
         }
     },
     "Materiais": {
-        "titulo":
-        "descrição: 
+        "titulo": "Materiais essenciais para a construção da máquina",
+        "descricao": "Você tenta pegar os materiais, "
+                    "mas havia um monstro escondido ali",
         "opcoes": {
             "Pegar materiais": "pegue o que precisa e volte para a entrada do quarto andar",
         }
     },
     "Laboratório de InstruMed": {
-        "titulo":
-        "descrição: 
+        "titulo": "O laboratório popular dos engenheiros",
+        "descricao": "Muitos instrumentos aqui, um ótimo lugar para "
+                    "fazer experimentos e cicuitos elétricos!!",
         "opcoes": {
             "Material": "pegar o que precisa para o circuito da máquina",
             "Voltar para a entrada": "volte para a entrada do quarto andar",
         }
     },
     "Sala 401": {
-        "titulo":
-        "descrição: 
+        "titulo": "A sala de DesSoft",
+        "descricao": "Você lembra das longas aulas de DesSoft que você "
+                     "normalmente tem aqui. "
+                     "Um ótimo lugar para programar!!",
         "opcoes": 
             "Assistir aula": "Aprenda tudo que você precisa para programar a sua máquina do tempo" ,
             "Fugir":"voltar para a entrada do quarto andar"
         }
     },
-    "Aula": {
-        "titulo":
-        "descrição: 
+     "Assistir aula": {
+        "titulo": "A aula decisiva",
+        "descricao": "você presta bastante atenção por conta do desespero!! "
+                     "Você aprendeu direitinho!!",
         "opcoes": {
             "Sair da sala": "volte para a entrada do quarto andar",
         }
     },
      "Décimo primeiro andar": {
-        "titulo":
-        "descrição: 
+        "titulo": "O andar da vitória",
+        "descricao": "Há um terraço bastante espaçoso aqui!! "
+                     "Perfeito para construir a máquina do tempo!!",
         "opcoes": {
             "Construir a máquina do tempo": "volte no tempo e tire A+ no EP (ou retorne a uma época em que computadores ainda não existiam)",
             "Voltar ao elevador": "encontre o material necessário para construir sua máquina" 
