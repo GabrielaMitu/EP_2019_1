@@ -59,7 +59,7 @@ def carregar_cenarios():
                          "mas você continua recusando! "
                          "Ele se torna um monstro!!",
             "opcoes": {
-                "Lutar": "Lutar contra monstro do Lab":,
+                "Lutar": "Lutar contra monstro do Lab",
                 "Fugir": "prefiro prender o cabelo",
             }
         }, 
@@ -186,7 +186,24 @@ def carregar_cenarios():
                      "Perfeito para construir a máquina do tempo!!",
         "opcoes": {
             "Construir a máquina do tempo": "volte no tempo e tire A+ no EP (ou retorne a uma época em que computadores ainda não existiam)",
-            "Voltar ao elevador": "encontre o material necessário para construir sua máquina" 
+            "Elevador do prédio velho": "volte e encontre o material necessário para construir sua máquina" ,
+        }
+    },       
+      "Sala do Andrew": {
+          "titulo": "A misteriosa sala proibida",
+          "descricao": "Você chega na sala "
+                       "Ele não está aqui... "
+                       "Em cima da mesa você encontra vários documentos falsificados sobre a verdadeira idade de Andrew!! "
+                       "Que absurdo!!",
+          "opcoes": {
+              "Elevador do prédio velho": "finge que nunca nem viu",
+        }
+    },
+        "Sala secreta": {
+            "titulo": "A sala",
+            "descricao": "tudo ou nada!!",
+            "opcoes": {
+                "Mercado livre": "Necessário 20 de dinheiro e 6 horas para vencer",
         }
     }}
     nome_cenario_atual = "Terraço (o início da aventura)"
@@ -216,14 +233,25 @@ def main():
 #### add mais monstros
     monstros = {
             "Golem":{
-                    "descricao": "",
+                    "descricao": "super desajeitado e poderoso",
                     "vida":10, 
                     "dano":5
                             },
             "Jupyter notebook":{
-                    "descricao": "",
+                    "descricao": "ele quer dificultar a sua vida",
                     "vida":8, 
                     "dano":8
+                            },
+            "Protótipo de NatDes": {
+                    "descricao": "você não o fez direito! Ele quer vingança!!
+                    "vida":9,
+                    "dano":7
+                            },
+            "Monstro Excel": {
+                    "descricao": "ele quer mais gráficos e fórmulas!!"
+                                  "Sua vontade é insaciável!!"
+                    "vida": 10
+                    "dano": 6
                     }
             }
             
@@ -236,6 +264,9 @@ def main():
               "Capital dos EUA":"Washington",
               "Ano do início da Revolução Francesa":"1789",
               "Ano do fim da Segunda Guerra Mundial":"1945",
+              "Qual é o sexto planeta do Sistema Solar (mais próximo para o mais longe do Sol)": "Saturno",
+              "Qual é a linguagem de programação mais usada?": "JavaScript",
+              "Quem é o criador da linguagem em Python? (nome completo)": "Guido van Rossum"
               }
     
     
