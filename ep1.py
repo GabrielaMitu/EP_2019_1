@@ -196,17 +196,7 @@ def carregar_cenarios():
             "titulo": "A sala",
             "descricao": "tudo ou nada!!",
             "opcoes": {
-                "Mercado livre": "Necessário 20 de dinheiro e 6 horas para vencer"
-    	}
-    },
-	"Teleporte": {
-	     "titulo": "Portal para outras salas insperianas",
-	     "descricao": "Quer ser teleportado rapidamente por entre os locais do Insper? "
-		 	  "É aqui mesmo!! É só digitar o cenário que desejar"
-	     "opcoes":{
-		"Terraço (o início da aventura)"
-		"Sala do Andrew"
-		 
+                "Mercado livre": "Necessário 20 de dinheiro e 6 horas para vencer" 
         }
     }}
     nome_cenario_atual = "Terraço (o início da aventura)"
