@@ -13,31 +13,13 @@ def carregar_cenarios():
                          "novo do Insper",
             "opcoes": {
                 "Escadas": "Descer para o quinto andar de escadas",
-                "Elevador": "usar o elevador para descer"
-            }
-        },
-        "Quinto andar do prédio novo": {
-            "Quinto andar do prédio novo": {
-            "titulo": "Andar para refletir",
-            "descricao": "o quinto andar não tem muitas coisas para fazer "
-                         "então vamos refletir",
-            "opcoes": {
-                "Escadas": "fugir para o quarto andar" 
-            }
-        },
-        "Elevador": {
-                "titulo": "Elevador do prédio novo",
-                "descricao": "Que pena, o elevador está quebrado!!",
-                "opcoes":{
-                    "Escadas": "Descer para o quinto andar de escadas",
-                    "Desistir da vida": "zerar o EP"
             }
         },
         "Quarto andar do prédio novo": {
             "titulo": "Andar da fuga",
             "descricao": "um pouco de sossego nesse andar",
             "opcoes": {
-                "Terceiro andar": "Ir direto para o FabLab"
+                "Terceiro andar": "Ir direto para o FabLab "
                                   "no terceiro andar para construir armas"
             }
         },
@@ -61,13 +43,6 @@ def carregar_cenarios():
                 "não comprar café": "muito caro! Não tenho esse dinheiro",
             }
         },
-        "Máquina de pipoca":{
-            "titulo": "maquininha com a melhor pipoca",
-            "descricao": "é realmente muito boa",
-            "opcoes": {
-                ""
-            }
-        },
         "FabLab": {
             "titulo": "melhor sala para futuros engenheiros!!",
             "descricao": "Aqui se encontra a super impressora 3D avançada "
@@ -84,16 +59,17 @@ def carregar_cenarios():
                          "mas você continua recusando! "
                          "Ele se torna um monstro!!",
             "opcoes": {
-                "lutar": "se lutar ganha 2 reais!",
-                "fugir": "prefiro prender o cabelo",
+                "Lutar": "Lutar contra monstro do Lab":,
+                "Fugir": "prefiro prender o cabelo",
             }
         }, 
         "Impressora 3D": {
             "titulo": "Uma bela máquina",
             "descricao": "Essa máquina pode fazer armas!!",
             "opcoes": {
-                "Martelo feito na impressora 3D: amassa o computador inimigo': 'leva 2 horas para fazer, mas é potente',
-                "Imprimir cupcakes":"presentes podem te ajudar a fazer aliados",
+                "Martelo": "Corta o inimigo (leva 2 horas para fazer, mas é potente)",
+                "Carrinho": "atropela o inimigo (leva 1 hora para fazer)",
+                "Cupcakes":"presentes podem te ajudar a fazer aliados",
                 "FabLab": "voltar para a sala dos engenheiros",
             }
         },
@@ -111,8 +87,8 @@ def carregar_cenarios():
             "titulo": "Há todos os tipos de livros aqui!!",
             "descricao": "Procure o manual!!",
         "opcoes": {
-            "compultador": "consultar para achar livros",
-            "bibliotecários": "perguntar onde os livros estão"
+            "Computador": "consultar para achar livros",
+            "Pessoa": "perguntar onde os livros estão"
         }        
     },
     "Computador": {
@@ -128,7 +104,7 @@ def carregar_cenarios():
         }
     },
       "Pessoa": {
-            "titulo": "A pessoa do fablab",
+            "titulo": "A pessoa da biblioteca",
             "descricao": "Você pergunta sobre a localização do manual, "
                          "mas ela nega dar a informação para você. "
                          "Você insiste. "
@@ -140,18 +116,20 @@ def carregar_cenarios():
         }
     },
     "Nerdbox": {
-        "titulo": "Paraíso dos engenheiros",
-        "descricao": "Aqui você encontra sossego!!"
+        "titulo": "Paraíso dos estudiosos",
+        "descricao": "Aqui você encontra sossego!! "
                      "O melhor lugar de estudos do Insper!!",
         "opcoes": {
-            "Abrir manual": "desvendar todos os segredos da máquina do tempo",
+            "Manual": "desvendar todos os segredos de como construir a máquina do tempo",
         }
     },
      "Manual": {
         "titulo": "Manual da salvação",
-        "descricao": "Tudo para se construir a máquina do tempo",
+        "descricao": "Nele, são revelados os materiais, a programação "
+                     "e que é nessário ao menos um aliado "
+                     "para a construção da máquina",
         "opcoes": {
-            "Pegar os elevadores": "vamos encontrar o que é necessário para construir a máquina do tempo! yayy!",
+            "Elevador do prédio velho": "vamos encontrar o que é necessário para construir a máquina do tempo! yayy!",
         }
     },
      "Elevador do prédio velho": {
@@ -159,7 +137,7 @@ def carregar_cenarios():
         "descricao": "Os elevadores desse prédio estão funcionando!! Yaayy!", 
         "opcoes": {
             "Ir para o quarto andar": "contém os segredos da engenharia",
-            "Ir para o segundo andar": "o help desk sempre pode te ajudar!"
+            "Ir para o segundo andar": "o help desk sempre pode te ajudar!",
             "Ir para o décimo primeiro andar": "etapa final do projeto! É aconselhável você visitar os outros andares antes"
         }
     },
@@ -168,9 +146,9 @@ def carregar_cenarios():
         "descricao": "Meu deus!! Tem muitos monstros no HelpDesk!! "
                      "Mas por algum motivo, eles são fofos...",
         "opcoes": {
-            "Luta": "podem ser fofos, mas mesmo assim são monstros! e você ganhará dois reais",
-            "Amizade": "faça um novo amigo e ainda ganhe um aliado para a construção!"
-            "Fuga": "corra até o elevador!"
+            "Lutar": "podem ser fofos, mas mesmo assim são monstros! Você ganhará ainda dois reais",
+            "Amigos": "Faça um novo amigo e ainda ganhe um aliado para a construção!",
+            "Fugir": "Corra até o elevador!"
         }
     },
     "Quarto andar do prédio velho": {
@@ -179,7 +157,7 @@ def carregar_cenarios():
         "opcoes": {
             "Laboratório de InstruMed": "ache circuitos e instrumentos para a construção",
             "Materiais": "são importantes para a máquina!",
-            "Sala 401": "aula de DeSoft: você vai virar um mestre em programação, mas vai levar 2 horas" ,
+            "Aula": "aula de DeSoft: você vai virar um mestre em programação, mas vai levar 2 horas" ,
             "Fuga":"pegue o elevador para outros andares",
             "Máquina de café":"um cafezinho é sempre bom para acordar"
         }
@@ -195,28 +173,11 @@ def carregar_cenarios():
     "Laboratório de InstruMed": {
         "titulo": "O laboratório popular dos engenheiros",
         "descricao": "Muitos instrumentos aqui, um ótimo lugar para "
-                    "fazer experimentos e cicuitos elétricos!!",
+                    "fazer experimentos e cicuitos elétricos!! "
+                    "Mas sempre tem relatório!!",
         "opcoes": {
             "Material": "pegar o que precisa para o circuito da máquina",
             "Voltar para a entrada": "volte para a entrada do quarto andar",
-        }
-    },
-    "Sala 401": {
-        "titulo": "A sala de DesSoft",
-        "descricao": "Você lembra das longas aulas de DesSoft que você "
-                     "normalmente tem aqui. "
-                     "Um ótimo lugar para programar!!",
-        "opcoes": 
-            "Assistir aula": "Aprenda tudo que você precisa para programar a sua máquina do tempo" ,
-            "Fugir":"voltar para a entrada do quarto andar"
-        }
-    },
-     "Assistir aula": {
-        "titulo": "A aula decisiva",
-        "descricao": "você presta bastante atenção por conta do desespero!! "
-                     "Você aprendeu direitinho!!",
-        "opcoes": {
-            "Sair da sala": "volte para a entrada do quarto andar",
         }
     },
      "Décimo primeiro andar": {
@@ -227,8 +188,8 @@ def carregar_cenarios():
             "Construir a máquina do tempo": "volte no tempo e tire A+ no EP (ou retorne a uma época em que computadores ainda não existiam)",
             "Voltar ao elevador": "encontre o material necessário para construir sua máquina" 
         }
-    },
-    nome_cenario_atual = "inicio"
+    }}
+    nome_cenario_atual = "Terraço (o início da aventura)"
     return cenarios, nome_cenario_atual
 
 
@@ -298,8 +259,146 @@ def main():
 
         # Aluno A: substitua este comentário pelo código para imprimir 
         # o cenário atual.
-        
-        print(cenario_atual)
+        if nome_cenario_atual=="Terraço (o início da aventura)":
+                  cenario_atual=cenarios[nome_cenario_atual]
+                  print("------------------------------")
+                  print(cenario_atual["titulo"])
+                  print(cenario_atual["descricao"])
+                  print(cenario_atual["opcoes"]["Escadas"])
+                  print()
+        if nome_cenario_atual=="Quarto andar do prédio novo":
+                  cenario_atual=cenarios[nome_cenario_atual]
+                  print("Quarto andar do prédio novo")
+                  print("---------------------------")
+                  print(cenario_atual["titulo"])
+                  print(cenario_atual["descricao"])
+                  print(cenario_atual["opcoes"]["Terceiro andar do prédio novo"])
+                  print()
+        if nome_cenario_atual=="Terceiro andar do prédio novo":
+                  cenario_atual=cenarios[nome_cenario_atual]
+                  print("Terceiro andar do prédio novo")
+                  print("-----------------------------")
+                  print(cenario_atual["titulo"])
+                  print(cenario_atual["descricao"])
+                  print(cenario_atual["opcoes"]["FabLab"])
+                  print(cenario_atual["opcoes"]["Máquina de café"])
+                  print(cenario_atual["opcoes"]["Segundo andar"])
+                  print()
+        if nome_cenario_atual=="Máquina de café":
+                  cenario_atual=cenarios[nome_cenario_atual]
+                  print("Máquina de café")
+                  print("---------------")
+                  print(cenario_atual["titulo"])
+                  print(cenario_atual["descricao"])
+                  print(cenario_atual["opcoes"]["Comprar café"])
+                  print(cenario_atual["opcoes"]["Não comprar café"])
+                  print()
+        if nome_cenario_atual=="FabLab":
+                  cenario_atual=cenarios[nome_cenario_atual]
+                  print("FabLab")
+                  print("------")
+                  print(cenario_atual["titulo"])
+                  print(cenario_atual["descricao"])
+                  print(cenario_atual["opcoes"]["Impressora 3D"])
+                  print(cenario_atual["opcoes"]["Terceiro andar"])
+                  print(cenario_atual["opcoes"]["Ah não"])
+                  print()                        
+        if nome_cenario_atual=="Ah não":
+                  cenario_atual=cenarios[nome_cenario_atual]
+                  print("Ah não")
+                  print("------")
+                  print(cenario_atual["titulo"])
+                  print(cenario_atual["descricao"])
+                  print(cenario_atual["opcoes"]["Lutar"])
+                  print(cenario_atual["opcoes"]["Fugir"])
+                  print()
+        if nome_cenario_atual=="Impressora 3D":
+                  cenario_atual=cenarios[nome_cenario_atual]
+                  print("Impressora 3D")
+                  print("-------------")
+                  print(cenario_atual["titulo"])
+                  print(cenario_atual["descricao"])
+                  print(cenario_atual["opcoes"]["Martelo"])
+                  print(cenario_atual["opcoes"]["Carrinho"])
+                  print(cenario_atual["opcoes"]["Cupcakes"])
+                  print(cenario_atual["opcoes"]["Fugir pro Lab"])
+                  print()
+        if nome_cenario_atual=="Segundo andar do prédio novo":
+                  cenario_atual=cenarios[nome_cenario_atual]
+                  print("Segundo andar do prédio novo")
+                  print("----------------------------")
+                  print(cenario_atual["titulo"])
+                  print(cenario_atual["descricao"])
+                  print(cenario_atual["opcoes"]["Tobogã"])
+                  print(cenario_atual["opcoes"]["Terceiro andar do prédio novo"])
+                  print()
+        if nome_cenario_atual=="Biblioteca":
+                  cenario_atual=cenarios[nome_cenario_atual]
+                  print("Biblioteca")
+                  print("----------")
+                  print(cenario_atual["titulo"])
+                  print(cenario_atual["descricao"])
+                  print(cenario_atual["opcoes"]["Lutar contra pessoa"])
+                  print(cenario_atual["opcoes"]["Lutar contra o computador"])
+                  print(cenario_atual["opcoes"]["Fugir para a biblioteca"])
+                  print()
+        if nome_cenario_atual=="Nerdbox":
+                  cenario_atual=cenarios[nome_cenario_atual]
+                  print("Nerdbox")
+                  print("-------")
+                  print(cenario_atual["titulo"])
+                  print(cenario_atual["descricao"])
+                  print(cenario_atual["opcoes"]["Manual"])
+                  print(cenario_atual["opcoes"]["Biblioteca"])
+                  print(cenario_atual["opcoes"]["Elevador do prédio velho"])
+                  print()
+        if nome_cenario_atual=="Manual":
+                  cenario_atual=cenarios[nome_cenario_atual]
+                  print("Manual")
+                  print("------")
+                  print(cenario_atual["titulo"])
+                  print(cenario_atual["descricao"])
+                  print()
+        if nome_cenario_atual=="Elevador do prédio velho":
+                  cenario_atual=cenarios[nome_cenario_atual]
+                  print("Elevador do prédio velho")
+                  print("------------------------")
+                  print(cenario_atual["titulo"])
+                  print(cenario_atual["descricao"])
+                  print(cenario_atual["opcoes"]["Segundo andar do prédio velho"])
+                  print(cenario_atual["opcoes"]["Quarto andar do prédio velho"])
+                  print()
+        if nome_cenario_atual=="Segundo andar do prédio velho":
+                  cenario_atual=cenarios[nome_cenario_atual]
+                  print("Segundo andar do prédio velho")
+                  print("-----------------------------")
+                  print(cenario_atual["titulo"])
+                  print(cenario_atual["descricao"])
+                  print(cenario_atual["opcoes"]["Lutar"])
+                  print(cenario_atual["opcoes"]["Amigos"])
+                  print(cenario_atual["opcoes"]["Fugir"])
+                  print()
+        if nome_cenario_atual=="Quarto andar do prédio velho":
+                  cenario_atual=cenarios[nome_cenario_atual]
+                  print("Quarto andar do prédio velho")
+                  print("----------------------------")
+                  print(cenario_atual["titulo"])
+                  print(cenario_atual["descricao"])
+                  print(cenario_atual["opcoes"]["Aula"])
+                  print(cenario_atual["opcoes"]["Materiais"])
+                  print(cenario_atual["opcoes"]["Laboratório de InstruMed"])
+                  print()
+        if nome_cenario_atual=="Décimo primeiro andar":
+                  cenario_atual=cenarios[nome_cenario_atual]
+                  print("Décimo primeiro andar")
+                  print("---------------------")
+                  print(cenario_atual["titulo"])
+                  print(cenario_atual["descricao"])
+                  print(cenario_atual["opcao"]["Construir a máquina do tempo"])
+                  print(cenario_atual["opcao"]["Elevador do prédio velho"])
+                  print()
+                        
+        #print(cenario_atual)
 
         
         
@@ -327,9 +426,9 @@ def main():
                 
         #no terraco
                 if escolha == 'Escadas':
-                    nome_cenario_atual = "Quarto andar"
+                    nome_cenario_atual="Quarto andar do prédio novo"
                     
-        #na maquina de cafe    
+        #na maquina de café
                 elif escolha == 'Comprar café':
                     if dinheiro >= 2:
                         dinheiro-=2
@@ -349,6 +448,7 @@ def main():
                     nome_cenario_atual = "Terceiro andar"
                 
      #impressora 3d
+                
                 elif escolha == "Martelo" or escolha == "Carrinho":
                     armas.append(escolha)
                     for a in armas:
@@ -361,14 +461,14 @@ def main():
                         print('Você possui agora: ' + p)
                     print('Você está retornando ao FabLab')
                     nome_cenario_atual = "FabLab"
-                elif escolha == 'Fugir pro Lab':
+                elif escolha == 'FabLab':
                     nome_cenario_atual = "FabLab"
-
+                    cenario_atual=cenarios[nome_cenario_atual]
                     
     # ah nao:
                         
-##COMBATE!##           
-                elif escolha == "Lutar contra monstro do Lab":
+##COMBATE!##            
+              elif escolha == "Lutar":
                          print('-'*len('combate'))
                     print('COMBATE')
                     print('-'*len('combate'))
@@ -457,10 +557,17 @@ def main():
                         print('Você ganhou {0} e agora tem {1} reais'.format(premio_dinheiro,dinheiro))
                         print('Você ganhou {0} e agora tem {1} horas'.format(premio_horas,horas))
                         nome_cenario_atual = "FabLab"
-                elif escolha == 'Fugir pro Lab':
+                elif escolha == 'Fugir':
                         nome_cenario_atual == "FabLab"
                         
             # segundo andar
+                nome_cenario_atual="Segundo andar do prédio novo"
+                cenario_atual=cenarios[nome_cenario_atual]
+                print("Segundo andar do prédio novo")
+                print("----------------------------")
+                print(cenario_atual["titulo"])
+                print(cenario_atual["descricao"])
+                print()
                 elif escolha == 'Teletransporte':
                     if dinheiro >= 2:
                         dinheiro-=2
