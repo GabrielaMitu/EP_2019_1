@@ -290,144 +290,25 @@ def main():
 
         # Aluno A: substitua este comentário pelo código para imprimir 
         # o cenário atual.
-        if nome_cenario_atual=="Terraço (o início da aventura)":
-                  cenario_atual=cenarios[nome_cenario_atual]
-                  print("------------------------------")
-                  print(cenario_atual["titulo"])
-                  print(cenario_atual["descricao"])
-                  print(cenario_atual["opcoes"]["Escadas"])
-                  print()
-        if nome_cenario_atual=="Quarto andar do prédio novo":
-                  cenario_atual=cenarios[nome_cenario_atual]
-                  print("Quarto andar do prédio novo")
-                  print("---------------------------")
-                  print(cenario_atual["titulo"])
-                  print(cenario_atual["descricao"])
-                  print(cenario_atual["opcoes"]["Terceiro andar do prédio novo"])
-                  print()
-        if nome_cenario_atual=="Terceiro andar do prédio novo":
-                  cenario_atual=cenarios[nome_cenario_atual]
-                  print("Terceiro andar do prédio novo")
-                  print("-----------------------------")
-                  print(cenario_atual["titulo"])
-                  print(cenario_atual["descricao"])
-                  print(cenario_atual["opcoes"]["FabLab"])
-                  print(cenario_atual["opcoes"]["Máquina de café"])
-                  print(cenario_atual["opcoes"]["Segundo andar"])
-                  print()
-        if nome_cenario_atual=="Máquina de café":
-                  cenario_atual=cenarios[nome_cenario_atual]
-                  print("Máquina de café")
-                  print("---------------")
-                  print(cenario_atual["titulo"])
-                  print(cenario_atual["descricao"])
-                  print(cenario_atual["opcoes"]["Comprar café"])
-                  print(cenario_atual["opcoes"]["Não comprar café"])
-                  print()
-        if nome_cenario_atual=="FabLab":
-                  cenario_atual=cenarios[nome_cenario_atual]
-                  print("FabLab")
-                  print("------")
-                  print(cenario_atual["titulo"])
-                  print(cenario_atual["descricao"])
-                  print(cenario_atual["opcoes"]["Impressora 3D"])
-                  print(cenario_atual["opcoes"]["Terceiro andar"])
-                  print(cenario_atual["opcoes"]["Ah não"])
-                  print()                        
-        if nome_cenario_atual=="Ah não":
-                  cenario_atual=cenarios[nome_cenario_atual]
-                  print("Ah não")
-                  print("------")
-                  print(cenario_atual["titulo"])
-                  print(cenario_atual["descricao"])
-                  print(cenario_atual["opcoes"]["Lutar"])
-                  print(cenario_atual["opcoes"]["Fugir"])
-                  print()
-        if nome_cenario_atual=="Impressora 3D":
-                  cenario_atual=cenarios[nome_cenario_atual]
-                  print("Impressora 3D")
-                  print("-------------")
-                  print(cenario_atual["titulo"])
-                  print(cenario_atual["descricao"])
-                  print(cenario_atual["opcoes"]["Martelo"])
-                  print(cenario_atual["opcoes"]["Carrinho"])
-                  print(cenario_atual["opcoes"]["Cupcakes"])
-                  print(cenario_atual["opcoes"]["Fugir pro Lab"])
-                  print()
-        if nome_cenario_atual=="Segundo andar do prédio novo":
-                  cenario_atual=cenarios[nome_cenario_atual]
-                  print("Segundo andar do prédio novo")
-                  print("----------------------------")
-                  print(cenario_atual["titulo"])
-                  print(cenario_atual["descricao"])
-                  print(cenario_atual["opcoes"]["Tobogã"])
-                  print(cenario_atual["opcoes"]["Terceiro andar do prédio novo"])
-                  print()
-        if nome_cenario_atual=="Biblioteca":
-                  cenario_atual=cenarios[nome_cenario_atual]
-                  print("Biblioteca")
-                  print("----------")
-                  print(cenario_atual["titulo"])
-                  print(cenario_atual["descricao"])
-                  print(cenario_atual["opcoes"]["Lutar contra pessoa"])
-                  print(cenario_atual["opcoes"]["Lutar contra o computador"])
-                  print(cenario_atual["opcoes"]["Fugir para a biblioteca"])
-                  print()
-        if nome_cenario_atual=="Nerdbox":
-                  cenario_atual=cenarios[nome_cenario_atual]
-                  print("Nerdbox")
-                  print("-------")
-                  print(cenario_atual["titulo"])
-                  print(cenario_atual["descricao"])
-                  print(cenario_atual["opcoes"]["Manual"])
-                  print(cenario_atual["opcoes"]["Biblioteca"])
-                  print(cenario_atual["opcoes"]["Elevador do prédio velho"])
-                  print()
-        if nome_cenario_atual=="Manual":
-                  cenario_atual=cenarios[nome_cenario_atual]
-                  print("Manual")
-                  print("------")
-                  print(cenario_atual["titulo"])
-                  print(cenario_atual["descricao"])
-                  print()
-        if nome_cenario_atual=="Elevador do prédio velho":
-                  cenario_atual=cenarios[nome_cenario_atual]
-                  print("Elevador do prédio velho")
-                  print("------------------------")
-                  print(cenario_atual["titulo"])
-                  print(cenario_atual["descricao"])
-                  print(cenario_atual["opcoes"]["Segundo andar do prédio velho"])
-                  print(cenario_atual["opcoes"]["Quarto andar do prédio velho"])
-                  print()
-        if nome_cenario_atual=="Segundo andar do prédio velho":
-                  cenario_atual=cenarios[nome_cenario_atual]
-                  print("Segundo andar do prédio velho")
-                  print("-----------------------------")
-                  print(cenario_atual["titulo"])
-                  print(cenario_atual["descricao"])
-                  print(cenario_atual["opcoes"]["Lutar"])
-                  print(cenario_atual["opcoes"]["Amigos"])
-                  print(cenario_atual["opcoes"]["Fugir"])
-                  print()
-        if nome_cenario_atual=="Quarto andar do prédio velho":
-                  cenario_atual=cenarios[nome_cenario_atual]
-                  print("Quarto andar do prédio velho")
-                  print("----------------------------")
-                  print(cenario_atual["titulo"])
-                  print(cenario_atual["descricao"])
-                  print(cenario_atual["opcoes"]["Aula"])
-                  print(cenario_atual["opcoes"]["Materiais"])
-                  print(cenario_atual["opcoes"]["Laboratório de InstruMed"])
-                  print()
-        if nome_cenario_atual=="Décimo primeiro andar":
-                  cenario_atual=cenarios[nome_cenario_atual]
-                  print("Décimo primeiro andar")
-                  print("---------------------")
-                  print(cenario_atual["titulo"])
-                  print(cenario_atual["descricao"])
-                  print(cenario_atual["opcao"]["Construir a máquina do tempo"])
-                  print(cenario_atual["opcao"]["Elevador do prédio velho"])
-                  print()
+ if horas <=0:
+        	print('Seu tempo acabou e seu futuro também')
+        	game_over= True
+    	
+    	cenario_atual = cenarios[nome_cenario_atual]
+    	titulo_cenario_atual = cenario_atual['titulo']
+    	descricao_cenario_atual = cenario_atual['descricao']
+    	
+   ############ 	
+    	print()
+    	print("-" * len(titulo_cenario_atual))
+    	print(titulo_cenario_atual)
+    	print("-" * len(titulo_cenario_atual))
+    	print(descricao_cenario_atual)
+    	print()
+    	opcoes = cenario_atual['opcoes']
+    	if len(opcoes) == 0:
+        	print("Acabaram-se suas opções! Mwo mwo mwooooo...")
+        	game_over = True
                         
         #print(cenario_atual)
 
