@@ -141,7 +141,7 @@ def carregar_cenarios():
             "Ir para o décimo primeiro andar": "etapa final do projeto! É aconselhável você visitar os outros andares antes"
         }
     },
-    "Segundo andar do prédio velho": {
+    "Andar dois": {
         "titulo": "O andar peculiar",
         "descricao": "Meu deus!! Tem muitos monstros no HelpDesk!! "
                      "Mas por algum motivo, eles são fofos...",
@@ -151,7 +151,7 @@ def carregar_cenarios():
             "Fugir": "Corra até o elevador!"
         }
     },
-    "Quarto andar do prédio velho": {
+    "Andar quatro": {
         "titulo": "O famoso andar dos engenheiros do prédio velho",
         "descricao": "Mãos a obra!!",
         "opcoes": {
@@ -180,7 +180,7 @@ def carregar_cenarios():
             "Voltar para a entrada": "volte para a entrada do quarto andar",
         }
     },
-     "Décimo primeiro andar": {
+     "Andar onze": {
         "titulo": "O andar da vitória",
         "descricao": "Há um terraço bastante espaçoso aqui!! "
                      "Perfeito para construir a máquina do tempo!!",
@@ -282,7 +282,27 @@ def main():
     print('Além disso, você gastou todo o seu dinheiro em bebidas e agora está pobre, sem dinheiro na carteira')
 
 
-    cenarios, nome_cenario_atual = carregar_cenarios()
+########## Criar avatar
+    avatar=input('Qual é o seu nome? ')
+	
+	print()
+	
+	print('Olá {0}, bem vindo ao jogo mais legal da sua vida!'.format(avatar))
+    
+	##### Início
+    
+	print()
+	print("Na hora do sufoco!")
+	print("------------------")
+	print()
+	print("Você acordou no Terraço do prédio novo do Insper depois de beber muito no dia anterior porque foi muito mal nas PIs e tem o trabalho inteiro de DesSoft para fazer para o dia seguinte.")
+	print()
+	print("Não vai dar tempo de fazer o trabalho para amanhã. Porém, há uma solução! Você deve construir uma máquina do tempo e voltar para o passado, podendo, assim, fazer o trabalho com calma")
+	print()
+	print('Faltam 10 horas para a entrega do EP. Mas cuidado! O tempo é relativo e você pode perder algumas horas com obstáculos ou derrotas em combates!')
+	print()
+	print('Além disso, você gastou todo o seu dinheiro em bebidas e agora está pobre, só tem uma nota trocado de dois reais...')
+
 
     game_over = False
     while not game_over:
@@ -298,7 +318,7 @@ def main():
     	titulo_cenario_atual = cenario_atual['titulo']
     	descricao_cenario_atual = cenario_atual['descricao']
     	
-   ############ 	
+   ############ Cenários prints
     	print()
     	print("-" * len(titulo_cenario_atual))
     	print(titulo_cenario_atual)
@@ -309,12 +329,10 @@ def main():
     	if len(opcoes) == 0:
         	print("Acabaram-se suas opções! Mwo mwo mwooooo...")
         	game_over = True
-                        
-        #print(cenario_atual)
+        
+        
+   ######Opções   
 
-        
-        
-        
         opcoes = "Suas opções são: " cenario_atual['opcoes']
         if len(opcoes) == 0:
             print("Acabaram-se suas opções! Mwo mwo mwooooo...")
@@ -497,41 +515,70 @@ def main():
                         print('Zerou o EP e está de DP')
                         game_over = True
             
-        # biblioteca
-                elif escolha == "Lutar contra pessoa" or escolha == "Lutar contra o computador":
-                        if len(armas) == 0:
-                            print('Você não tem nenhuma arma para lutar!')
-                            print('O monstro ganhou!')
-                            print('Game Over para você...')
-                            game_over = True
-                        else:
-                            arma_escolhida=input('Qual arma você quer usar? ')
-                            if arma_escolhida in armas:
-                                if arma_escolhida == 'Martelo':
-                                    horas-=2
-                                    print('Parabéns! Você venceu!')
-                                    print('Ganhou o manual')
-                                    print('Mas demora para achar os livros...')
-                                    print('Você perdeu duas horas')
-                                    print('Restam {0} horas'.format(horas))
-                                    nome_cenario_atual = 'Nerdbox'
-
-                                elif arma_escolhida == 'Carrinho':
-                                    horas-=3
-                                    print('Parabéns! Você venceu!')
-                                    print('Ganhou o manual')
-                                    print('Mas demora para achar os livros...')
-                                    print('Você perdeu três horas')
-                                    print('Restam {0} horas'.format(horas))
-                                    nome_cenario_atual = 'Nerdbox'
-                            else:
-                                print('Você não tem essa arma')
-                                print('Está perdido demais, nem sabe o que tem')
-                                print('Não vai entregar o EP e está de DP!')
-                                game_over = True
-                                
-                elif escolha == 'Fugir para a biblioteca':
-                        nome_cenario_atual = 'Biblioteca'
+########### biblioteca
+               elif escolha == "Lutar contra pessoa":
+                	print('Você agora enfrentará um desafio')
+                	print('Para conseguir o manual, deve passar por um quiz de conhecimento')
+                	print('Você deverá escrever apenas o sobrenome do autor do livro')
+                	print('Boa sorte!')
+                	
+                	contador = 0
+                	game_on= True
+                	while contador <= 3 and game_on:
+                    	livro=random.choice(list(livros.keys()))
+                    	certo=livros[livro]
+                    	resposta=input('Qual o autor do livro {0}? '.format(livro))
+                    	if resposta == certo:
+                        	game_on = False
+                    	else:
+                        	print('Não foi dessa vez...')
+                        	print('Tente novamente')
+                    	contador+=1
+        	
+                	if game_on:
+                    	print('Você não passou no teste')
+                    	print('O jogo acabou')
+                    	game_over=True
+                	else:
+                    	horas-=3
+                    	print('Parabéns! Você venceu!')
+                    	print('Ganhou o manual')
+                    	print('Mas demora para achar os livros...')
+                    	print('Você perdeu três horas')
+                    	print('Restam {0} horas'.format(horas))
+                    	nome_cenario_atual = 'Nerdbox'  
+            	
+            	
+            	
+            	elif escolha == "Lutar contra o computador":
+                    	contador = 0
+                    	game_on= True
+                    	while contador < 3 and game_on:
+                        	tec=random.choice(tecnologias.keys())
+                        	certo=tecnologias[tec]
+                        	resposta=input('Qual o inventor de {0}? '.format(tec))
+                        	if resposta == certo:
+                            	game_on = False
+                        	else:
+                            	print('Não foi dessa vez...')
+                            	print('Tente novamente')
+                        	contador+=1
+            	
+                    	if game_on:
+                        	print('Você não passou no teste')
+                        	print('O jogo acabou')
+                        	game_over=True
+                    	else:
+                        	horas-=3
+                        	print('Parabéns! Você venceu!')
+                        	print('Ganhou o manual')
+                        	print('Mas demora para achar os livros...')
+                        	print('Você perdeu três horas')
+                        	print('Restam {0} horas'.format(horas))
+                        	nome_cenario_atual = 'Nerdbox'    	
+                                            	
+            	elif escolha == 'Fugir para a biblioteca':
+                	nome_cenario_atual = 'Biblioteca'
                         
                         
                                 
