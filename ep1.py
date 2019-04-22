@@ -317,13 +317,13 @@ def main():
 
          
         # Código cenário atual.
- if horas <=0:
+ 	if horas <=0:
         	print('Seu tempo acabou e seu futuro também')
         	game_over= True
     	
-    	cenario_atual = cenarios[nome_cenario_atual]
-    	titulo_cenario_atual = cenario_atual['titulo']
-    	descricao_cenario_atual = cenario_atual['descricao']
+    		cenario_atual = cenarios[nome_cenario_atual]
+    		titulo_cenario_atual = cenario_atual['titulo']
+    		descricao_cenario_atual = cenario_atual['descricao']
     	
    ############ Cenários prints
     	print()
