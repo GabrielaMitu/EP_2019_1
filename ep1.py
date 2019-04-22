@@ -15,7 +15,7 @@ def carregar_cenarios():
                 "Escadas": "Descer para o quinto andar de escadas",
             }
         },
-        "Quarto andar do prédio novo": {
+        "Quarto andar": {
             "titulo": "Andar da fuga",
             "descricao": "um pouco de sossego nesse andar",
             "opcoes": {
@@ -23,7 +23,7 @@ def carregar_cenarios():
                                   "no terceiro andar para construir armas"
             }
         },
-        "Terceiro andar do prédio novo": {
+        "Terceiro andar": {
             "titulo": "o melhor andar!!",
             "descricao": "Aqui se encontra o famoso FabLab, lar de muitos "
                        "engenheiros, onde tudo pode ser construído!! "
@@ -211,13 +211,21 @@ def carregar_cenarios():
 
 
 def main():
+	
+#no inicio do jogo, o jogador possui 10 horas, 2 reais e 16 vidas. Conforme vai jogando, pode perder ou ganhar tempo, dinheiro e vidas
     horas=10
 
     dinheiro=2
 
+    vidas_jogador = 16
+	
+#Armas e presentes podem ser fabricados no laboratório. O jogador pode armazenar estes itens em um inventário para uso futuro
+
     armas={}
 
     presentes={}
+
+#Há alguns requisitos para que o jogo seja ganho. O jogador deve conquistar habilidades de programacao, materiais e ao menos um aliado para construir a máquina do tempo
 
     requisitos=[]
 
@@ -227,10 +235,10 @@ def main():
     
     vitoria=False
     
-    vidas_jogador = 16
+    
 
 
-#### add mais monstros
+#### Monstros contra os quais o jogador pode lutar
     monstros = {
             "Golem":{
                     "descricao": "super desajeitado e poderoso",
@@ -256,7 +264,7 @@ def main():
             }
             
             
-############# add mais perguntas
+##### Perguntas e respostas para o combate
     conhecimento={"5 primeiros dígitos de pi, sem vírgula":"31415",
               "Capital da Austrália":"Canberra",
               "Capital da Islândia":"Reykjavik",
@@ -289,7 +297,7 @@ def main():
 	
 	print('Olá {0}, bem vindo ao jogo mais legal da sua vida!'.format(avatar))
     
-	##### Início
+	##### Início e descrição da partida
     
 	print()
 	print("Na hora do sufoco!")
@@ -308,8 +316,6 @@ def main():
     while not game_over:
         cenario_atual = cenarios[nome_cenario_atual]
 
-        # Aluno A: substitua este comentário pelo código para imprimir 
-        # o cenário atual.
  if horas <=0:
         	print('Seu tempo acabou e seu futuro também')
         	game_over= True
@@ -318,7 +324,7 @@ def main():
     	titulo_cenario_atual = cenario_atual['titulo']
     	descricao_cenario_atual = cenario_atual['descricao']
     	
-   ############ Cenários prints
+   ############ Cenários 
     	print()
     	print("-" * len(titulo_cenario_atual))
     	print(titulo_cenario_atual)
@@ -356,7 +362,7 @@ def main():
                 
         #no terraco
                 if escolha == 'Escadas':
-                    nome_cenario_atual="Quarto andar do prédio novo"
+                    nome_cenario_atual="Quarto andar"
                     
         #na maquina de café
                 elif escolha == 'Comprar café':
@@ -395,7 +401,7 @@ def main():
                     nome_cenario_atual = "FabLab"
                     cenario_atual=cenarios[nome_cenario_atual]
                     
-    # ah nao:
+    # escolha ah nao:
                         
 ##COMBATE!##            
               elif escolha == "Lutar":
@@ -491,7 +497,7 @@ def main():
                         nome_cenario_atual == "FabLab"
                         
             # segundo andar
-                nome_cenario_atual="Segundo andar do prédio novo"
+                nome_cenario_atual="Andar dois"
                 cenario_atual=cenarios[nome_cenario_atual]
                 print("Segundo andar do prédio novo")
                 print("----------------------------")
@@ -525,32 +531,36 @@ def main():
                 	contador = 0
                 	game_on= True
                 	while contador <= 3 and game_on:
-                    	livro=random.choice(list(livros.keys()))
-                    	certo=livros[livro]
-                    	resposta=input('Qual o autor do livro {0}? '.format(livro))
-                    	if resposta == certo:
-                        	game_on = False
-                    	else:
-                        	print('Não foi dessa vez...')
-                        	print('Tente novamente')
-                    	contador+=1
+                    		livro=random.choice(list(livros.keys()))
+                    		certo=livros[livro]
+                    		resposta=input('Qual o autor do livro {0}? '.format(livro))
+                    		if resposta == certo:
+                        		game_on = False
+                    		else:
+                        		print('Não foi dessa vez...')
+                        		print('Tente novamente')
+                    		contador+=1
         	
                 	if game_on:
-                    	print('Você não passou no teste')
-                    	print('O jogo acabou')
-                    	game_over=True
+                    		print('Você não passou no teste')
+                    		print('O jogo acabou')
+                    		game_over=True
                 	else:
-                    	horas-=3
-                    	print('Parabéns! Você venceu!')
-                    	print('Ganhou o manual')
-                    	print('Mas demora para achar os livros...')
-                    	print('Você perdeu três horas')
-                    	print('Restam {0} horas'.format(horas))
-                    	nome_cenario_atual = 'Nerdbox'  
+                    		horas-=3
+                    		print('Parabéns! Você venceu!')
+                    		print('Ganhou o manual')
+                    		print('Mas demora para achar os livros...')
+                    		print('Você perdeu três horas')
+                    		print('Restam {0} horas'.format(horas))
+                    		nome_cenario_atual = 'Nerdbox'  
             	
             	
             	
             	elif escolha == "Lutar contra o computador":
+			print('Você agora enfrentará um desafio')
+                	print('Para conseguir o manual, deve passar por um quiz de conhecimento')
+                	print('Você deverá responder perguntas sobre tecnologia')
+                	print('Boa sorte!')
                     	contador = 0
                     	game_on= True
                     	while contador < 3 and game_on:
