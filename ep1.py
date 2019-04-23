@@ -407,7 +407,7 @@ def main():
                 if escolha == 'Escadas':
                     nome_cenario_atual="Quarto andar"
 		
-		elif escolha == 'Desistir da vida:
+		elif escolha == 'Desistir da vida':
 			game_over = True
                     
         #na maquina de café
