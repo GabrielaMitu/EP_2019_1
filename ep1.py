@@ -237,7 +237,8 @@ def carregar_cenarios():
                 "Fugir para a biblioteca": "Sair correndo para a biblioteca",
 
         }
-    }}
+    }
+    }
     nome_cenario_atual = "Terraço (o início da aventura)"
     return cenarios, nome_cenario_atual
 
@@ -285,7 +286,7 @@ def main():
                     "vida": 10,
                     "dano": 6
                     }
-            },
+            }
 	            
 ############# perguntas para as rodadas do combate
     conhecimento={"5 primeiros dígitos de pi, sem vírgula":"31415",
@@ -347,7 +348,6 @@ def main():
     print('Além disso, você gastou todo o seu dinheiro em bebidas e agora está pobre, só tem uma nota trocado de dois reais...')
 
     while not game_over:
-        cenario_atual = cenarios[nome_cenario_atual]
 
          
         # Código cenário atual.
@@ -355,9 +355,9 @@ def main():
         	print('Seu tempo acabou e seu futuro também')
         	game_over= True
     	
-    		cenario_atual = cenarios[nome_cenario_atual]
-    		titulo_cenario_atual = cenario_atual['titulo']
-    		descricao_cenario_atual = cenario_atual['descricao']
+    	cenario_atual = cenarios[nome_cenario_atual]
+    	titulo_cenario_atual = cenario_atual['titulo']
+    	descricao_cenario_atual = cenario_atual['descricao']
     	
    ############ Cenários prints
     	print()
