@@ -107,37 +107,6 @@ def carregar_cenarios():
             "Pessoa": "perguntar onde os livros estão"
         }        
     },
-	    "Computador": {
-
-            "titulo": "super tecnológico",
-
-            "descricao": "mostre seus conhecimentos de tecnologia para conseguir o manual",
-            "opcoes": {
-
-                "Lutar contra o computador": "você pode encontrar o manual de construção da máquina do tempo, mas isso irá te custar uma hora",
-
-                "Fugir para a biblioteca": "sair correndo para a biblioteca"
-
-        }
-
-    },
-
-     "Pessoa": {
-
-            "titulo": "bibliotecários salvadores",
-
-            "descricao": "te ajudarão a encontrar o manual, mas você deve mostrar que entende de leitura",
-
-            "opcoes": {
-
-                "Lutar contra pessoa": "Você pode conquistar o manual de instruções para a máquina do tempo, mas isso irá te custar uma hora",
-
-                "Fugir para a biblioteca": "Sair correndo para a biblioteca"
-
-        }
-
-    },
-
     "Nerdbox": {
         "titulo": "Paraíso dos estudiosos",
         "descricao": "Aqui você encontra sossego!! "
@@ -184,27 +153,18 @@ def carregar_cenarios():
 	    "Teleporte":"vá para onde quiser, desde que saiba o nome do local"
         }
     },
-	    "Sala 401": {
-
+    "Sala 401": {
         "titulo":"Casa do Python",
-
         "descricao": "é aqui que a mágica da programação acontece",
-
         "opcoes": {
-
             "Aula": "Aprenda tudo que você precisa para programar a sua máquina do tempo em duas horas" ,
-
             "Andar quatro":"voltar para a entrada do quarto andar"
         }
     },
     "Aula": {
-
         "titulo":"Tudo sobre programação",
-
         "descricao": "como programar sua máquina do tempo",
-
         "opcoes": {
-
             "Andar quatro": "volte para a entrada do quarto andar"
         }
     },
@@ -300,7 +260,7 @@ def main():
                     "vida": 10,
                     "dano": 6
 	    		    },
-	    	    "Computador": {
+            "Computador": {
             	    "descricao": "você tenta procurar o manual pelo pc, "
                          	 "mas ele não mostra a localização do manual. "
                          	 "Você fica com raiva e chuta o computador. "
@@ -309,7 +269,6 @@ def main():
             	     "vida": 7,
 		     "dano": 7
 	                     },
-                
       	    "Pessoa": {
             	     "descricao": "Você pergunta sobre a localização do manual, "
                         	  "mas ela nega dar a informação para você. "
