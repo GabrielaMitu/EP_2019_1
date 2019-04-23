@@ -221,8 +221,8 @@ def carregar_cenarios():
                          "Ele revela ser um monstro disfarçado "
                          "e tenta te matar",                        
             "opcoes": {
-                "Lutar contra o programa que localiza livros": "você pode encontrar o manual de construção da máquina do tempo, mas isso irá te custar uma hora",
-                "Fugir": "sair correndo para a biblioteca",
+                "Lutar contra o computador": "você pode encontrar o manual de construção da máquina do tempo, mas isso irá te custar uma hora",
+                "Fugir para a biblioteca": "sair correndo para a biblioteca",
         }
     },
         "Pessoa": {
@@ -233,10 +233,8 @@ def carregar_cenarios():
                          "Ela revela ser um monstro disfarçado "
                          "e tenta te matar",
             "opcoes": {
-                "Lutar": "Você pode conquistar o manual de instruções para a máquina do tempo, mas isso irá te custar uma hora",
-                "Fugir": "Sair correndo para a biblioteca",
-        }
-    },
+                "Lutar contra pessoa": "Você pode conquistar o manual de instruções para a máquina do tempo, mas isso irá te custar uma hora",
+                "Fugir para a biblioteca": "Sair correndo para a biblioteca",
 
         }
     }}
