@@ -195,11 +195,8 @@ def carregar_cenarios():
             "Aula": "Aprenda tudo que você precisa para programar a sua máquina do tempo em duas horas" ,
 
             "Andar quatro":"voltar para a entrada do quarto andar"
-
         }
-
     },
-
     "Aula": {
 
         "titulo":"Tudo sobre programação",
@@ -209,11 +206,8 @@ def carregar_cenarios():
         "opcoes": {
 
             "Andar quatro": "volte para a entrada do quarto andar"
-
         }
-
     },
-
     "Materiais": {
         "titulo": "Materiais essenciais para a construção da máquina",
         "descricao": "Você tenta pegar os materiais, "
@@ -306,10 +300,27 @@ def main():
                     "vida": 10,
                     "dano": 6
 	    		    },
-	   
-            }
-            
-            
+	    	    "Computador": {
+            	    "descricao": "você tenta procurar o manual pelo pc, "
+                         	 "mas ele não mostra a localização do manual. "
+                         	 "Você fica com raiva e chuta o computador. "
+                         	 "Ele revela ser um monstro disfarçado "
+                         	 "e tenta te matar",                        
+            	     "vida": 7,
+		     "dano": 7
+	                     },
+                
+      	    "Pessoa": {
+            	     "descricao": "Você pergunta sobre a localização do manual, "
+                        	  "mas ela nega dar a informação para você. "
+                         	  "Você insiste. "
+                         	  "Ela revela ser um monstro disfarçado "
+                         	  "e tenta te matar",
+            	     "vida": 9,
+                     "dano": 5
+                    }
+            },
+	            
 ############# perguntas para as rodadas do combate
     conhecimento={"5 primeiros dígitos de pi, sem vírgula":"31415",
               "Capital da Austrália":"Canberra",
