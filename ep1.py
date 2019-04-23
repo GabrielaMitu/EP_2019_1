@@ -209,7 +209,7 @@ def carregar_cenarios():
             "titulo": "A sala",
             "descricao": "tudo ou nada!!",
             "opcoes": {
-                "Mercado livre": "Necessário 20 de dinheiro e 6 horas para vencer" 
+                "Mercado livre": "Necessário 20 de dinheiro e 6 horas para vencer",
 		"Teleporte": "vá para outros cenários para ganhar tempo e dinheiro"
      	}
     },
