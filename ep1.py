@@ -75,7 +75,7 @@ def carregar_cenarios():
                          "mas você continua recusando! "
                          "Ele se torna um monstro!!",
             "opcoes": {
-                "Lutar contra monstro do lab": "Combate!",
+                "Lutar contra monstro do Lab": "Combate!",
                 "Fugir pro Lab": "prefiro prender o cabelo",
             }
         }, 
