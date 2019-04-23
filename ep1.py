@@ -55,8 +55,8 @@ def carregar_cenarios():
             "titulo": "maquininha de café gostoso",
             "descricao": "muuuito café para comprar",
             "opcoes": {
-                "comprar café": "2 reais",
-                "não comprar café": "muito caro! Não tenho esse dinheiro",
+                "Comprar café": "2 reais",
+                "Não comprar café": "muito caro! Não tenho esse dinheiro",
             }
         },
         "FabLab": {
@@ -64,7 +64,7 @@ def carregar_cenarios():
             "descricao": "Aqui se encontra a super impressora 3D avançada "
                          "do Insper, mas prenda o cabelo para utilizá-la!!",
             "opcoes": {
-                "Impressora 3D": "usar impressora 3D super avançada",
+                "Impressora 3D": "você precisará dos presentes e armas que ela pode fabricar!",
                 "Terceiro andar": "corredor",
                 "Ah não": "Me recuso a prender o cabelo!"
             }
@@ -75,15 +75,15 @@ def carregar_cenarios():
                          "mas você continua recusando! "
                          "Ele se torna um monstro!!",
             "opcoes": {
-                "Lutar": "Lutar contra monstro do Lab",
-                "Fugir": "prefiro prender o cabelo",
+                "Lutar contra monstro do lab": "Combate!",
+                "Fugir pro Lab": "prefiro prender o cabelo",
             }
         }, 
         "Impressora 3D": {
             "titulo": "Uma bela máquina",
             "descricao": "Você vai precisar de armas e presentes futuramente para lidar com os monstros!! Escolha bem!!",
             "opcoes": {
-                "Martelo": "Corta o inimigo (leva 2 horas para fazer, mas é potente)",
+                "Martelo": "amassa o inimigo (leva 2 horas para fazer, mas é potente)",
                 "Carrinho": "atropela o inimigo (leva 1 hora para fazer)",
                 "Cupcakes":"presentes podem te ajudar a fazer aliados",
                 "FabLab": "voltar para a sala dos engenheiros",
@@ -95,8 +95,8 @@ def carregar_cenarios():
                          "para o prédio antigo do Insper!! Mágico!! "
                          "Porém custa 2 reais",
             "opcoes": {
-                "usar tobogã": "te teletransporta para o prédio antigo do Insper, mas custa 2 reais",
-                "Voltar para o terceiro andar": "retornar e matar um monstro"
+                "Tobogã": "te teletransporta para o prédio antigo do Insper, mas custa 2 reais",
+                "Terceiro andar": "retornar e matar um monstro"
         }
     },
     "Biblioteca": {
@@ -107,6 +107,37 @@ def carregar_cenarios():
             "Pessoa": "perguntar onde os livros estão"
         }        
     },
+	    "Computador": {
+
+            "titulo": "super tecnológico",
+
+            "descricao": "mostre seus conhecimentos de tecnologia para conseguir o manual",
+            "opcoes": {
+
+                "Lutar contra o computador": "você pode encontrar o manual de construção da máquina do tempo, mas isso irá te custar uma hora",
+
+                "Fugir para a biblioteca": "sair correndo para a biblioteca"
+
+        }
+
+    },
+
+     "Pessoa": {
+
+            "titulo": "bibliotecários salvadores",
+
+            "descricao": "te ajudarão a encontrar o manual, mas você deve mostrar que entende de leitura",
+
+            "opcoes": {
+
+                "Lutar contra pessoa": "Você pode conquistar o manual de instruções para a máquina do tempo, mas isso irá te custar uma hora",
+
+                "Fugir para a biblioteca": "Sair correndo para a biblioteca"
+
+        }
+
+    },
+
     "Nerdbox": {
         "titulo": "Paraíso dos estudiosos",
         "descricao": "Aqui você encontra sossego!! "
@@ -148,12 +179,41 @@ def carregar_cenarios():
         "descricao": "Mãos a obra!!",
         "opcoes": {
             "Laboratório de InstruMed": "ache circuitos e instrumentos para a construção",
-            "Materiais": "são importantes para a máquina!",
-            "Aula": "aula de DeSoft: você vai virar um mestre em programação, mas vai levar 2 horas" ,
-            "Fuga":"pegue o elevador para outros andares",
-            "Máquina de café":"um cafezinho é sempre bom para acordar"
+            "Sala 401": "aula de DeSoft: você vai virar um mestre em programação, mas vai levar 2 horas" ,
+            "Elevadores":"pegue o elevador para outros andares",
+	    "Teleporte":"vá para onde quiser, desde que saiba o nome do local"
         }
     },
+	    "Sala 401": {
+
+        "titulo":"Casa do Python",
+
+        "descricao": "é aqui que a mágica da programação acontece",
+
+        "opcoes": {
+
+            "Aula": "Aprenda tudo que você precisa para programar a sua máquina do tempo em duas horas" ,
+
+            "Andar quatro":"voltar para a entrada do quarto andar"
+
+        }
+
+    },
+
+    "Aula": {
+
+        "titulo":"Tudo sobre programação",
+
+        "descricao": "como programar sua máquina do tempo",
+
+        "opcoes": {
+
+            "Andar quatro": "volte para a entrada do quarto andar"
+
+        }
+
+    },
+
     "Materiais": {
         "titulo": "Materiais essenciais para a construção da máquina",
         "descricao": "Você tenta pegar os materiais, "
@@ -178,8 +238,7 @@ def carregar_cenarios():
                      "Perfeito para construir a máquina do tempo!!",
         "opcoes": {
             "Construir a máquina do tempo": "volte no tempo e tire A+ no EP (ou retorne a uma época em que computadores ainda não existiam)",
-            "1": "volte e encontre o material necessário para construir sua máquina" ,
-            "2": "desistir de tudo"
+            "Elevadores": "volte ao jogo e tente conseguir os requisitos"
         }
     }, 
       "Sala do Andrew": {
@@ -197,6 +256,7 @@ def carregar_cenarios():
             "descricao": "tudo ou nada!!",
             "opcoes": {
                 "Mercado livre": "Necessário 20 de dinheiro e 6 horas para vencer" 
+		"Teleporte": "vá para outros cenários para ganhar tempo e dinheiro"
         }
     }}
     nome_cenario_atual = "Terraço (o início da aventura)"
@@ -223,7 +283,7 @@ def main():
     vidas_jogador = 16
 
 
-#### add mais monstros
+#### Lista de monstros
     monstro = {
             "Golem":{
                     "descricao": "super desajeitado e poderoso",
@@ -246,29 +306,11 @@ def main():
                     "vida": 10,
                     "dano": 6
 	    		    },
-	    "Computador": {
-            	    "descricao": "você tenta procurar o manual pelo pc, "
-                         	 "mas ele não mostra a localização do manual. "
-                         	 "Você fica com raiva e chuta o computador. "
-                         	 "Ele revela ser um monstro disfarçado "
-                         	 "e tenta te matar",                        
-            	     "vida": 7,
-		     "dano": 7
-	                     },
-                
-      	    "Pessoa": {
-            	     "descricao": "Você pergunta sobre a localização do manual, "
-                        	  "mas ela nega dar a informação para você. "
-                         	  "Você insiste. "
-                         	  "Ela revela ser um monstro disfarçado "
-                         	  "e tenta te matar",
-            	     "vida": 9
-                     "dano": 5
-                    }
-            },
+	   
+            }
             
             
-############# add mais perguntas
+############# perguntas para as rodadas do combate
     conhecimento={"5 primeiros dígitos de pi, sem vírgula":"31415",
               "Capital da Austrália":"Canberra",
               "Capital da Islândia":"Reykjavik",
@@ -280,6 +322,21 @@ def main():
               "Qual é a linguagem de programação mais usada?": "JavaScript",
               "Quem é o criador da linguagem em Python? (nome completo)": "Guido van Rossum"
               }
+	
+#perguntas para a luta contra computador na biblioteca
+tecnologias={"Marca de computador com símbolo de maçã":"Apple",
+            "Como escrever pi em Python":"math.pi",
+	     "Criador da Microsoft":"Bill Gates",
+            "Tecnologia cognitiva da IBM usada em diagnósticos":"Watson",
+	     "Como escrever multiplicação em Python":"*"}
+    
+#perguntas para luta contra pessoa na biblioteca
+    livros={"Introdução a engenharia":"Dym",
+	    "Harry Potter":"Rowling",
+            "1984":"Orwell",
+	    "A estrutura das revoluções científicas":"Kuhn",
+            "Memórias póstumas de Brás Cubas":"Assis",
+	    "Sherlock Holmes":"Doyle"}
 
 
 
@@ -321,9 +378,9 @@ def main():
         	print('Seu tempo acabou e seu futuro também')
         	game_over= True
     	
-    		cenario_atual = cenarios[nome_cenario_atual]
-    		titulo_cenario_atual = cenario_atual['titulo']
-    		descricao_cenario_atual = cenario_atual['descricao']
+    	cenario_atual = cenarios[nome_cenario_atual]
+    	titulo_cenario_atual = cenario_atual['titulo']
+    	descricao_cenario_atual = cenario_atual['descricao']
     	
    ############ Cenários prints
     	print()
@@ -340,7 +397,7 @@ def main():
         
    ######Opções   
 	
-        opcoes = "Suas opções são: " cenario_atual['opcoes']
+        opcoes = cenario_atual['opcoes']
         if len(opcoes) == 0:
             print("Acabaram-se suas opções! Mwo mwo mwooooo...")
             game_over = True
@@ -355,9 +412,8 @@ def main():
             if escolha in opcoes:
                 nome_cenario_atual=escolha
 		
-            # Aluno B: substitua este comentário e a linha abaixo pelo código
-            # para pedir a escolha do usuário.
-             opcoes = cenario_atual['opcoes']
+		
+#se não tiver opções
         if len(opcoes) == 0:
             print("Acabaram-se suas opções! Mwo mwo mwooooo...")
             game_over = True
@@ -372,7 +428,10 @@ def main():
                 
         #no terraco
                 if escolha == 'Escadas':
-                    nome_cenario_atual="Quarto andar do prédio novo"
+                    nome_cenario_atual="Quarto andar"
+		
+		elif escolha == 'Desistir da vida:
+			game_over = True
                     
         #na maquina de café
                 elif escolha == 'Comprar café':
@@ -395,27 +454,41 @@ def main():
                 
      #impressora 3d
                 
-                elif escolha == "Martelo" or escolha == "Carrinho":
-                    armas.append(escolha)
-                    for a in armas:
-                        print('Você possui agora: ' + a)
+                elif escolha == "Martelo": 
+                    horas-=2
+                    dinheiro-=2
+                    print('Você tem agora {0} horas e {1} reais'.format(horas,dinheiro))
+                    armas[escolha]=6
+                    print('Você possui agora como armas: ')
+                    for a in armas.keys():
+                        print(a)
                     print('Você está retornando ao FabLab')
                     nome_cenario_atual = "FabLab"
+                elif escolha == "Carrinho":
+                    armas[escolha]=3
+                    horas-=1
+                    dinheiro-=1
+                    print('Você tem agora {0} horas e {1} reais'.format(horas,dinheiro))
+                    print('Você possui agora como armas: ')
+                    for a in armas.keys():
+                        print(a)
+                    print('Você está retornando ao FabLab')
+                    nome_cenario_atual = "FabLab"
+                
                 elif escolha == 'Cupcakes':
-                    presentes.append(escolha)
-                    for p in presentes:
+                    presentes[escolha]='Todo mundo gosta'
+                    for p in presentes.keys():
                         print('Você possui agora: ' + p)
                     print('Você está retornando ao FabLab')
                     nome_cenario_atual = "FabLab"
-                elif escolha == 'FabLab':
+                elif escolha == 'Fugir pro Lab':
                     nome_cenario_atual = "FabLab"
-                    cenario_atual=cenarios[nome_cenario_atual]
                     
     # ah nao:
                         
 ##COMBATE!##            
-              elif escolha == "Lutar":
-                         print('-'*len('combate'))
+              elif escolha == "Lutar contra monstro do Lab":
+                    print('-'*len('combate'))
                     print('COMBATE')
                     print('-'*len('combate'))
 
@@ -507,14 +580,8 @@ def main():
                         nome_cenario_atual == "FabLab"
                         
             # segundo andar
-                nome_cenario_atual="Segundo andar do prédio novo"
-                cenario_atual=cenarios[nome_cenario_atual]
-                print("Segundo andar do prédio novo")
-                print("----------------------------")
-                print(cenario_atual["titulo"])
-                print(cenario_atual["descricao"])
-                print()
-                elif escolha == 'Teletransporte':
+    
+                elif escolha == 'Tobogã':
                     if dinheiro >= 2:
                         dinheiro-=2
                         horas+=4
@@ -532,6 +599,7 @@ def main():
                         game_over = True
             
 ########### biblioteca
+	#se quiser enfrentar pessoa
                elif escolha == "Lutar contra pessoa":
                 	print('Você agora enfrentará um desafio')
                 	print('Para conseguir o manual, deve passar por um quiz de conhecimento')
@@ -552,17 +620,19 @@ def main():
                     	contador+=1
         	
                 	if game_on:
-                    	print('Você não passou no teste')
-                    	print('O jogo acabou')
-                    	game_over=True
+                    		print('Você não passou no teste')
+                    		print('O jogo acabou')
+                    		game_over=True
                 	else:
-                    	horas-=3
-                    	print('Parabéns! Você venceu!')
-                    	print('Ganhou o manual')
-                    	print('Mas demora para achar os livros...')
-                    	print('Você perdeu três horas')
-                    	print('Restam {0} horas'.format(horas))
-                    	nome_cenario_atual = 'Nerdbox'             	
+                    		horas-=3
+                    		print('Parabéns! Você venceu!')
+                    		print('Ganhou o manual')
+                    		print('Mas demora para achar os livros...')
+                    		print('Você perdeu três horas')
+                    		print('Restam {0} horas'.format(horas))
+                    		nome_cenario_atual = 'Nerdbox'     
+				
+		#se quiser enfrentar o computador
             	elif escolha == "Lutar contra o computador":
                     	contador = 0
                     	game_on= True
@@ -571,10 +641,10 @@ def main():
                         	certo=tecnologias[tec]
                         	resposta=input('Qual o inventor de {0}? '.format(tec))
                         	if resposta == certo:
-                            	game_on = False
+                            		game_on = False
                         	else:
-                            	print('Não foi dessa vez...')
-                            	print('Tente novamente')
+                            		print('Não foi dessa vez...')
+                            		print('Tente novamente')
                         	contador+=1
                     	if game_on:
                         	print('Você não passou no teste')
@@ -587,7 +657,9 @@ def main():
                         	print('Mas demora para achar os livros...')
                         	print('Você perdeu três horas')
                         	print('Restam {0} horas'.format(horas))
-                        	nome_cenario_atual = 'Nerdbox'    	                                            	
+                        	nome_cenario_atual = 'Nerdbox'    	
+				
+		#se quiser fugir
             	elif escolha == 'Fugir para a biblioteca':
                 	nome_cenario_atual = 'Biblioteca'
                         
@@ -659,7 +731,7 @@ def main():
                             game_over = True
                             
                         else:
-                             requisitos.append('Aliado')
+                            requisitos.append('Aliado')
                             print('Voce deu um: ')
                             for p, d in presentes.items():
                                 print(p + ': ' + d)
@@ -694,7 +766,7 @@ def main():
                 elif nome_cenario_atual == "Materiais":
                     requisitos.append('Materiais')
                     nome_cenario_atual = "Materiais"
-	##################################            
+	            
             # Feature do teleporte:
             
                 elif escolha == "Teleporte":
@@ -703,7 +775,7 @@ def main():
                         print("Não é possível ir para esse lugar")
                         lugar_escolhido=input("Para onde você quer ir? ")
                     nome_cenario_atual = lugar_escolhido
-        ################################## 
+	#a sala do andrew e a sala secreta só podem ser acessadas pelo teleporte
                 
    # Se o jogador descobrir a existência da sala secreta, pode ganhar o jogo, se tiver tempo e dinheiro suficientes
             # OBS: ela só pode ser acessada pelo teleporte
