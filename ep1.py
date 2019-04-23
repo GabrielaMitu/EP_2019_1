@@ -348,9 +348,9 @@ tecnologias={"Marca de computador com símbolo de maçã":"Apple",
         	print('Seu tempo acabou e seu futuro também')
         	game_over= True
     	
-    	cenario_atual = cenarios[nome_cenario_atual]
-    	titulo_cenario_atual = cenario_atual['titulo']
-    	descricao_cenario_atual = cenario_atual['descricao']
+    		cenario_atual = cenarios[nome_cenario_atual]
+    		titulo_cenario_atual = cenario_atual['titulo']
+    		descricao_cenario_atual = cenario_atual['descricao']
     	
    ############ Cenários prints
     	print()
