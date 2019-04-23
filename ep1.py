@@ -211,6 +211,33 @@ def carregar_cenarios():
             "opcoes": {
                 "Mercado livre": "Necessário 20 de dinheiro e 6 horas para vencer" 
 		"Teleporte": "vá para outros cenários para ganhar tempo e dinheiro"
+     	}
+    },
+        "Computador": {
+            "titulo": "O computador misterioso da biblioteca",
+            "descricao": "você tenta procurar o manual pelo pc, "
+                         "mas ele não mostra a localização do manual. "
+                         "Você fica com raiva e chuta o computador. "
+                         "Ele revela ser um monstro disfarçado "
+                         "e tenta te matar",                        
+            "opcoes": {
+                "Lutar contra o programa que localiza livros": "você pode encontrar o manual de construção da máquina do tempo, mas isso irá te custar uma hora",
+                "Fugir": "sair correndo para a biblioteca",
+        }
+    },
+        "Pessoa": {
+            "titulo": "A pessoa da biblioteca",
+            "descricao": "Você pergunta sobre a localização do manual, "
+                         "mas ela nega dar a informação para você. "
+                         "Você insiste. "
+                         "Ela revela ser um monstro disfarçado "
+                         "e tenta te matar",
+            "opcoes": {
+                "Lutar": "Você pode conquistar o manual de instruções para a máquina do tempo, mas isso irá te custar uma hora",
+                "Fugir": "Sair correndo para a biblioteca",
+        }
+    },
+
         }
     }}
     nome_cenario_atual = "Terraço (o início da aventura)"
@@ -259,24 +286,6 @@ def main():
                                  "Sua vontade é insaciável!!",
                     "vida": 10,
                     "dano": 6
-	    		    },
-            "Computador": {
-            	    "descricao": "você tenta procurar o manual pelo pc, "
-                         	 "mas ele não mostra a localização do manual. "
-                         	 "Você fica com raiva e chuta o computador. "
-                         	 "Ele revela ser um monstro disfarçado "
-                         	 "e tenta te matar",                        
-            	     "vida": 7,
-		     "dano": 7
-	                     },
-      	    "Pessoa": {
-            	     "descricao": "Você pergunta sobre a localização do manual, "
-                        	  "mas ela nega dar a informação para você. "
-                         	  "Você insiste. "
-                         	  "Ela revela ser um monstro disfarçado "
-                         	  "e tenta te matar",
-            	     "vida": 9,
-                     "dano": 5
                     }
             },
 	            
@@ -294,7 +303,7 @@ def main():
               }
 	
 #perguntas para a luta contra computador na biblioteca
-tecnologias={"Marca de computador com símbolo de maçã":"Apple",
+    tecnologias={"Marca de computador com símbolo de maçã":"Apple",
             "Como escrever pi em Python":"math.pi",
 	     "Criador da Microsoft":"Bill Gates",
             "Tecnologia cognitiva da IBM usada em diagnósticos":"Watson",
